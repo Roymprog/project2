@@ -12,7 +12,7 @@ Summary: A web application that lets students look for, but also 'subscribe' to 
 Features:
 
   - Designed for smartphone use with resolution between 320x480 and 760 x 1280
-  - Divide courses in departments i.e. faculties
+  - Divide courses in departments i.e. Institute
   - Users may search courses through; catalog number, title, description, instructor, faculty, EC
   - Course information to display: catalog number, submission code, study code, titles, faculty, EC, descriptions, 
     staff, maximum amount of participants, semester/blok
