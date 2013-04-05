@@ -14,12 +14,15 @@ Features:
   - Users may search courses through; catalog number, title, description, instructor, faculty, EC
   - Course information to display: catalog number, submission code, study code, titles, faculty, EC, descriptions, 
     staff, maximum amount of participants, semester/blok
-  - Contains "register" and "log in" page redirecting to "Courses I'm taking" screen upon succes
-  - "Courses I'm taking" screen contains links to 2 other screens: "Search Courses" and "Recently viewed Courses"
-  - The "Courses I'm taking" page should allow the user to delete selected courses
+  - Contains "register" and "log in" page redirecting to "Index" screen upon succes
+  - "Index" page contains links to 4 other screens: "Courses I'm Taking", "Search Courses", "Bookmarked courses"
+    and "Recently viewed Courses"
+  - The "Courses I'm taking" page should display all subscribed courses and allow the user to delete selected courses
   - "Search Courses" should allow all the searching features mentioned 5 lines above and select them, adding them
     to the "Courses I'm taking" page
   - The "Recently viewed Courses" page should show all viewed courses visited this session
+  - In the "Search Courses" section there should be a 'bookmark' option to remember courses even after current session
+  - "Bookmarked Courses" displays all bookmarked courses and allows the user to remove 'bookmarked' courses
 
 Framework/ languages/ libraries and other technical stuff:
 
