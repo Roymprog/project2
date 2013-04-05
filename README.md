@@ -1,6 +1,8 @@
 project2
 ========
 
+[img]url[/img]
+
 App Studio Project 2
 
 Titel: UvA Courses Mall
