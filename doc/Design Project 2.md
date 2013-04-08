@@ -1,12 +1,11 @@
-roject2
+<h1>Project2</h1>
 
-App Studio Project 2
+<h2>Titel: UvA Courses Mall</h2>
 
-Titel: UvA Courses Mall
+<h3>Summary:</h3>
+A web application that lets students look for, but also 'subscribe' to courses
 
-Summary: A web application that lets students look for, but also 'subscribe' to courses
-
-Features:
+<h3>Features:</h3>
   - Designed for smartphone use with resolution between 320x480 and 760 x 1280
   - Divide courses in departments i.e. Institute
   - Users may search courses through; catalog number, title, description, instructor, institute, EC
@@ -20,16 +19,16 @@ Features:
   - In the "Search Courses" section there should be a 'bookmark' option to remember courses even after current session
   "Bookmarked Courses" displays all bookmarked courses and allows the user to remove 'bookmarked' courses
   
-Framework/ languages/ libraries and other technical stuff:
+<h3>Framework/ languages/ libraries and other technical stuff:</h3>
   - The courses library used will be courses.xml, which will be stored in mySQL library
   - The users will also be stored in mySQL library(maybe couple users and courses?)
   - The app will be made with html5, JavaScript and Ruby
   - The app will feature jQuery(Mobile jQuery for smart phone users)
   - The process will be uploaded to GitHub
 
-Models:
+<h3>Models:</h3>
 
-Class course :
+<h4>Class course :</h4>
 
   :Course_name
   :Institute 
@@ -45,19 +44,31 @@ Class course :
 has_many :staffs
 has_many :programmes
 
-The course list will be stored locally on the device of the user. The list will be stored three times. 
-Once for the "Courses I'm taking", for "Bookmarked courses" and for "Recently viewed courses".
+The course list will be stored locally as lists on the device of the user. The list will be stored three 
+times. Once for the "Courses I'm taking", for "Bookmarked courses" and for "Recently viewed courses".
 
-Class staff:
+<h4>Class staff:</h4>
 
   :Name
   :url
 
 belongs_to :course
 
-Class programme:
+<h4>Class programme:</h4>
 
   :name
   :url
 
 belongs_to :course
+
+
+<h3>Controllers: </h3>
+
+<h4course:</h4>
+
+def create
+def show
+def edit
+def destroy
+def bookmark
+def search
