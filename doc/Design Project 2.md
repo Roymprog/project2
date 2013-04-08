@@ -14,10 +14,11 @@ A web application that lets students look for, but also 'subscribe' to courses
   - Contains "register" and "log in" page redirecting to "Courses I'm taking" screen upon succes
   "Courses I'm taking" page contains links to 3 other screens: "Search Courses", "Bookmarked courses" and "Recently viewed Courses"
   - The "Courses I'm taking" page should display all subscribed courses and allow the user to delete selected courses. 
-  "Search Courses" should allow all the searching features mentioned 5 lines above and select them, adding them to the "Courses I'm taking" page
-  - The "Recently viewed Courses" page should show all viewed courses visited this session
+  "Search Courses" should allow all the searching features mentioned above displaying 20 per page. Selecting them will add
+  them to the "Courses I'm taking" page
+  - The "Recently viewed Courses" page should show all viewed courses visited this session (20 per page)
   - In the "Search Courses" section there should be a 'bookmark' option to remember courses even after current session
-  "Bookmarked Courses" displays all bookmarked courses and allows the user to remove 'bookmarked' courses
+  "Bookmarked Courses" displays all bookmarked courses and allows the user to remove 'bookmarked' courses (20 per page)
   
 <h3>Framework/ languages/ libraries and other technical stuff:</h3>
   - The courses library used will be courses.xml, which will be stored in mySQL library
