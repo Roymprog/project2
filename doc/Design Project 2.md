@@ -28,7 +28,7 @@ A web application that lets students look for, but also 'subscribe' to courses
 
 <h3>Models:</h3>
 
-Class course:
+**Class course:**
 
   :Course_name
   :Institute 
@@ -54,7 +54,7 @@ times. Once for the "Courses I'm taking", for "Bookmarked courses" and for "Rece
 
 belongs_to :course
 
-Class programme:
+**Class programme:**
 
   :name
   :url
@@ -64,7 +64,7 @@ belongs_to :course
 
 <h3>Controllers: </h3>
 
-course:
+**course:**
 
 def create
 def show
