@@ -28,7 +28,7 @@ A web application that lets students look for, but also 'subscribe' to courses
 
 <h3>Models:</h3>
 
-<h4>Class course:</h4>
+Class course:
 
   :Course_name
   :Institute 
@@ -47,7 +47,7 @@ has_many :programmes
 The course list will be stored locally as lists on the device of the user. The list will be stored three 
 times. Once for the "Courses I'm taking", for "Bookmarked courses" and for "Recently viewed courses".
 
-Class staff:
+**Class staff:**
 
   :Name
   :url
