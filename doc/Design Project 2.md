@@ -28,7 +28,7 @@ A web application that lets students look for, but also 'subscribe' to courses
 
 <h3>Models:</h3>
 
-Class course :
+<h4>Class course:</h4>
 
   :Course_name
   :Institute 
