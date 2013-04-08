@@ -30,16 +30,16 @@ A web application that lets students look for, but also 'subscribe' to courses
 
 **Class course:**
 
-  :Course_name
-  :Institute 
-  :Catalog_number
-  :EC
-  :Staff 
-  :Max_population
-  :Semester
-  :Blok
-  :Description
-  :Programme
+  - :Course_name
+  - :Institute 
+  - :Catalog_number
+  - :EC
+  - :Staff 
+  - :Max_population
+  - :Semester
+  - :Blok
+  - :Description
+  - :Programme
 
 has_many :staffs
 has_many :programmes
@@ -49,15 +49,15 @@ times. Once for the "Courses I'm taking", for "Bookmarked courses" and for "Rece
 
 **Class staff:**
 
-  :Name
-  :url
+ -  :Name
+ -  :url
 
 belongs_to :course
 
 **Class programme:**
 
-  :name
-  :url
+  - :name
+  - :url
 
 belongs_to :course
 
@@ -66,9 +66,9 @@ belongs_to :course
 
 **course:**
 
-def create
-def show
-def edit
-def destroy
-def bookmark
-def search
+- def create
+- def show
+- def edit
+- def destroy
+- def bookmark
+- def search
