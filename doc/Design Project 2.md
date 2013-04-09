@@ -8,10 +8,9 @@ A web application that lets students look for, but also 'subscribe' to courses
 <h3>Features:</h3>
   - Designed for smartphone use with resolution between 320x480 and 760 x 1280
   - Divide courses in departments i.e. Institute
-  - Users may search courses through; catalog number, title, description, instructor, institute, EC
+  - Users may search courses through; catalog number, title, description, instructor, institute, EC, semester, blok
   - Course information to display: catalog number, submission code, study code, titles, institute, EC, descriptions, staff, maximum amount 
   of participants, semester/blok and programmes
-  - Contains "register" and "log in" page redirecting to "Courses I'm taking" screen upon succes
   "Courses I'm taking" page contains links to 3 other screens: "Search Courses", "Bookmarked courses" and "Recently viewed Courses"
   - The "Courses I'm taking" page should display all subscribed courses and allow the user to delete selected courses. 
   "Search Courses" should allow all the searching features mentioned above displaying 20 per page. Selecting them will add
