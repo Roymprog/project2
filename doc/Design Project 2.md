@@ -41,7 +41,7 @@ A web application that lets students look for, but also 'subscribe' to courses
   - :Description
   - :Programme
 
-has_many :staffs
+`has_and_belongs_to_many :staffs`
 <br>
 belongs_to :programmes
 
@@ -53,7 +53,7 @@ times. Once for the "Courses I'm taking", for "Bookmarked courses" and for "Rece
  -  :Name
  -  :url
 
-has_many :courses
+`has_and_belongs_to_many :courses`
 
 **Class programme:**
 
