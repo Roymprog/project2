@@ -43,7 +43,7 @@ A web application that lets students look for, but also 'subscribe' to courses
 
 `has_and_belongs_to_many :staffs`
 <br>
-belongs_to :programmes
+`has_and_belongs_to_many :programmes`
 
 The course list will be stored locally as lists on the device of the user. The list will be stored three 
 times. Once for the "Courses I'm taking", for "Bookmarked courses" and for "Recently viewed courses".
@@ -60,7 +60,7 @@ times. Once for the "Courses I'm taking", for "Bookmarked courses" and for "Rece
   - :name
   - :url
 
-has_many :courses
+`has_and_belongs_to_many :courses`
 
 
 <h3>Controllers: </h3>
