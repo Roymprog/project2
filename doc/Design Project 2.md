@@ -73,7 +73,8 @@ handled by javascript.
 - def search
 
 <h3>Display:</h3>
-<a href="https://github.com/Roymprog/project2/tree/master/doc/Screen display/Courses_I'm_taking (1).png/</a>
+<a href="https://github.com/Roymprog/project2/tree/master/doc/Screen display/Courses_I'm_taking (1).png"</a>
+
 ![Courses I'm taking](https://github.com/Roymprog/project2/tree/master/doc/Screen display/Courses_I'm_taking (1).png)
 ![Bookmarked courses](https://github.com/Roymprog/project2/tree/master/doc/Screen display/Bookmarked_courses (2).png)
 ![Search courses](https://github.com/Roymprog/project2/tree/master/doc/Screen display/Search_courses (3).png)
