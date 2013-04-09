@@ -71,3 +71,13 @@ handled by javascript.
 - def show
 - def bookmark
 - def search
+
+<h3>Display:</h3>
+
+![Courses I'm taking](https://github.com/Roymprog/project2/tree/master/doc/Screen display/Courses_I'm_taking (1).png)
+![Bookmarked courses](https://github.com/Roymprog/project2/tree/master/doc/Screen display/Bookmarked_courses (2).png)
+![Search courses](https://github.com/Roymprog/project2/tree/master/doc/Screen display/Search_courses (3).png)
+![Recently viewed courses](https://github.com/Roymprog/project2/tree/master/doc/Screen display/   Recently_viewed_Courses (4).png)
+![Search results](https://github.com/Roymprog/project2/tree/master/doc/Screen display/Search_results (5).png)
+![Selected course](https://github.com/Roymprog/project2/tree/master/doc/Screen display/Selected_course (6).png)
+
