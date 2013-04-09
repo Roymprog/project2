@@ -36,8 +36,7 @@ A web application that lets students look for, but also 'subscribe' to courses
   - :EC
   - :Staff 
   - :Maximum
-  - :Semester
-  - :Blok
+  - :Blok (semester en blok in een, 1 - 6)
   - :Description
   - :Programme
 
