@@ -31,12 +31,12 @@ A web application that lets students look for, but also 'subscribe' to courses
 
 **Class course:**
 
-  - :Course_name
+  - :Name
   - :Institute 
   - :Catalog_number
   - :EC
   - :Staff 
-  - :Max_population
+  - :Maximum
   - :Semester
   - :Blok
   - :Description
