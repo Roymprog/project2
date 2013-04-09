@@ -8,14 +8,14 @@ A web application that lets students look for, but also 'subscribe' to courses
 <h3>Features:</h3>
   - Designed for smartphone use with resolution between 320x480 and 760 x 1280
   - Divide courses in departments i.e. Institute
-  - Users may search courses through; catalog number, title, description, instructor, institute, EC, semester, blok
+  - Users may search courses through; catalog number, title, description, instructor, institute, EC, blok(1-6)
   - Course information to display: catalog number, submission code, study code, titles, institute, EC, descriptions, staff, maximum amount 
   of participants, semester/blok and programmes
   "Courses I'm taking" page contains links to 3 other screens: "Search Courses", "Bookmarked courses" and "Recently viewed Courses"
   - The "Courses I'm taking" page should display all subscribed courses and allow the user to delete selected courses. 
   "Search Courses" should allow all the searching features mentioned above displaying 20 per page. Selecting them will add
   them to the "Courses I'm taking" page
-  - The "Recently viewed Courses" page should show all viewed courses visited this session (20 per page)
+  - The "Recently viewed Courses" page should show all viewed courses visited the past 7 days
   - In the "Search Courses" section there should be a 'bookmark' option to remember courses even after current session
   "Bookmarked Courses" displays all bookmarked courses and allows the user to remove 'bookmarked' courses (20 per page)
   
@@ -46,7 +46,9 @@ A web application that lets students look for, but also 'subscribe' to courses
 `has_and_belongs_to_many :programmes`
 
 The course list will be stored locally as lists on the device of the user. The list will be stored three 
-times. Once for the "Courses I'm taking", for "Bookmarked courses" and for "Recently viewed courses".
+times. Once for the "Courses I'm taking", for "Bookmarked courses" and for "Recently viewed courses". The local
+storing will be done by javascript. Deletion of 'Bookmarked courses' and 'Courses I'm taking' will also be 
+handled by javascript.
 
 **Class staff:**
 
@@ -67,9 +69,6 @@ times. Once for the "Courses I'm taking", for "Bookmarked courses" and for "Rece
 
 **course:**
 
-- def create
 - def show
-- def edit
-- def destroy
 - def bookmark
 - def search
