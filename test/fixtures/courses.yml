@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  institute: MyString
+  Catalog_number: MyString
+  ec: 
+  staff: MyString
+  maximum: 
+  blok: 
+  programme: MyString
+  description: MyString
+
+two:
+  name: MyString
+  institute: MyString
+  Catalog_number: MyString
+  ec: 
+  staff: MyString
+  maximum: 
+  blok: 
+  programme: MyString
+  description: MyString
