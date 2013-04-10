@@ -36,8 +36,7 @@ A web application that lets students look for, but also 'subscribe' to courses
   - :EC
   - :Staff 
   - :Maximum
-  - :Semester
-  - :Blok
+  - :Blok (semester en blok in een, 1 - 6)
   - :Description
   - :Programme
 
@@ -72,3 +71,8 @@ handled by javascript.
 - def show
 - def bookmark
 - def search
+
+<h3>Display:</h3>
+<a href="https://github.com/Roymprog/project2/tree/master/doc/Screen display/Courses_I'm_taking (1).png"</a>
+
+![Link to Screen display map](https://github.com/Roymprog/project2/tree/master/doc/Screen display/)
