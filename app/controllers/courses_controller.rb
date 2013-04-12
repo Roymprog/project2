@@ -39,10 +39,12 @@ def create
   end
 
   def result
-    @courses = Course.where(:title => params[:q])
+    @results = Course.where("name like '%" + params[:q] + "%'")
     
+    respond_to do |format|
       format.html 
-      format.json { render json: @courses }
+      format.json { render json: @results }
+    end
   end
 
 def update
