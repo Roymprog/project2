@@ -38,7 +38,11 @@ def create
   def bookmark
   end
 
-  def search
+  def result
+    @courses = Course.where(:title => params[:q])
+    
+      format.html 
+      format.json { render json: @courses }
   end
 
 def update

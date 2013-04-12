@@ -11,18 +11,22 @@ f = File.open("courses.xml")
 @doc = Nokogiri::XML(f)
 @doc.xpath("/courses/course").each do |course|
 	
-	Course.create(:catalog_number => course.xpath("@sgid").text,
-		 		  :name => course.xpath("name").text,
-				  :ec => course.xpath("ects").text,
-				  :blok => course.xpath("period").text,
-				  :institute => course.xpath("institute").text,
-				  :description => course.xpath("description").text,
-				  :maximum => course.xpath("participant_count").text)
-	Staff.find_or_create(:name => course.xpath("staff_list/staff/name"),
-				         :url => course.xpath("staff_list/staff/url"))
-	Programme.find_or_create(:name => course.xpath("programmes/programme/name"),
-					         :url => course.xpath("programmes/programme/url"))
-	puts course.xpath("name").text 
+	c = Course.create(:catalog_number => course.xpath("@sgid").text.strip,
+		 		  	  :name => course.xpath("name").text.strip,
+					  :ec => course.xpath("ects").text.strip,
+					  :blok => course.xpath("period").text.strip,
+					  :institute => course.xpath("institute").text.strip,
+					  :description => course.xpath("description").text.strip,
+					  :maximum => course.xpath("participant_count").text.strip)
+	course.xpath("staff_list/staff").each do |staff|
+	c.staffs << Staff.create(:name => staff.xpath("name").text.strip,
+				         	 :url => staff.xpath("url").text.strip)
+	end
+	course.xpath("programmes/programme").each do |programme|
+	c.programmes << Programme.create(:name => course.xpath("name").text.strip,
+					         		 :url => course.xpath("url").text.strip)
+	end
+	
 end
 	
 #@doc.xpath("/courses/course/institute").each do |filldb|

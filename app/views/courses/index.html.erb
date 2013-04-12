@@ -1,5 +1,7 @@
 <h1>Listing courses</h1>
 
+<%= link_to 'Search Course', search_courses_path %>
+
 <table>
   <tr>
     <th>Course's name</th>
@@ -16,7 +18,7 @@
     <td><%= course.name %></td>
     <td><%= course.institute %></td>
     <td><%= course.ec %></td>
-    <td><%= course.staff(params[:name]) %></td>
+    <td><%= course.staffs.map(&:name).join(",") %></td>
     <td><%= course.blok %></td>
     <td><%= link_to 'Show', course %></td>
     <td><%= link_to 'Delete', course, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -26,4 +28,4 @@
 
 <br />
 
-<%= link_to 'New Course', new_course_path %>
+

@@ -1,9 +1,14 @@
 Project2::Application.routes.draw do
-  resources :courses
+  resources :courses do
+    collection do  
+      get 'search' 
+    end
+  end
+ 
+  match '/search(.:q)' => 'courses#result'
 
-
-  get "home/index"
-
+  get "courses/index"
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

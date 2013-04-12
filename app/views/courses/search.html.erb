@@ -1,0 +1,9 @@
+<h1>Search courses</h1>
+
+<%= form_tag("/search", :method => "get") do %>
+  <%= label_tag(:q, "Title:") %>
+  <%= text_field_tag(:q) %>
+  <%= submit_tag("Search") %>
+<% end %>
+
+<%= link_to 'Back', courses_path %>
