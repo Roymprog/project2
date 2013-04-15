@@ -19,8 +19,8 @@ ActiveRecord::Schema.define(:version => 20130410111257) do
     t.string   "catalog_number"
     t.integer  "ec"
     t.string   "staff"
-    t.integer  "maximum"
-    t.integer  "blok"
+    t.string   "maximum"
+    t.string   "blok"
     t.string   "programme"
     t.text     "description"
     t.datetime "created_at",     :null => false

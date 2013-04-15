@@ -39,7 +39,16 @@ def create
   end
 
   def result
-    @results = Course.where("name like '%" + params[:q] + "%'")
+    id = Staff.where("name like '%" + params[:s] + "%'").first.courses.first.id
+    @results = Course.where("name like '%" + params[:n] + "%' AND 
+                            institute like '%" + params[:i] + "%' AND
+                            catalog_number like '%" + params[:c] + "%' AND
+                            ec like '%" + params[:ec] + "%' AND
+                            description like '%" + params[:d] + "%' AND
+                            id = id AND
+                            maximum like '%" + params[:m] + "%' AND
+                            blok like '%" 'semester ' + params[:p] + "%' AND
+                            blok like '%" 'blok ' + params[:b] + "%'")
     
     respond_to do |format|
       format.html 

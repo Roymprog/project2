@@ -5,7 +5,7 @@ Project2::Application.routes.draw do
     end
   end
  
-  match '/search(.:q)' => 'courses#result'
+  match '/search(.:n)(.:i)(.:c)(.:ec)(.:m)(.:p)(.:b)(.:s)(.:d)' => 'courses#result'
 
   get "courses/index"
   

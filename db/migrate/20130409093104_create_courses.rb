@@ -6,8 +6,8 @@ class CreateCourses < ActiveRecord::Migration
       t.string :catalog_number
       t.integer :ec
       t.string :staff
-      t.integer :maximum
-      t.integer :blok
+      t.string :maximum
+      t.string :blok
       t.string :programme
       t.text :description
 

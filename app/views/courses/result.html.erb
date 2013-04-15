@@ -1,6 +1,14 @@
 <h1>Search results</h1>
 
+<table>
+  <tr>
+    <th>Course's name</th>
+    <th>Catalog number</th>
+  </tr>
+
 <% @results.each do |result| %>
-	<%= result.name %>
+  <tr>
+	<td><%= result.name %></td>
+	<td><%= result.catalog_number %></td>
+  </tr>
 <%end%>
-<%= @q %>

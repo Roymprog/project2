@@ -1,0 +1,620 @@
+<courses>
+    <course acode="SCH" code="4HIMS15" sgid="5254CAFE6Y">
+        <name>Chemical Analysis for Forensic Evidence (CAFE) </name>
+        <ects>
+            6
+        </ects>
+        <year>
+        </year>
+        <period>
+            Semester 1 block 2, voertaal English
+        </period>
+        <institute>
+            Masters School of Sciences
+        </institute>
+        <staff_list>
+            <staff id="7079">
+                <name> prof.dr.ir. J.G.M. Janssen </name>
+                <url> http://studiegids.uva.nl/web/uva/sgs/nl/d/7079.html </url>
+            </staff>
+            <staff id="831">
+                <name> prof.dr.ir. P.J. Schoenmakers </name>
+                <url> http://studiegids.uva.nl/web/uva/sgs/nl/d/831.html </url>
+            </staff>
+        </staff_list>
+        <programmes>
+            <programme id="25">
+                <name> Master's in Chemistry, track Analytical Sciences </name>
+                <url> http://studiegids.uva.nl/web/uva/sgs/nl/p/25.html </url>
+            </programme>
+        </programmes>
+        <description>
+
+            &lt;p&gt;Analytical chemistry is a pervasive science in the forensic field. Many different types of forensic samples are subjected to chemical analysis. The types of samples, sample handling and sample preparation are briefly discussed. Analytical methods are described in two different ways. A technical perspective is offered for those students that are not yet familiar with forensic science. An example-driven forensic perspective is used to illustrate the application of a variety of methods in practice. The possibilities and limitations of analytical methods are discussed. Attention will be paid to special requirements of chemical analysis in a forensic context (quality, traceability, contamination. An important aspect of the course is a meaningful interpretation of the data, based on (Bayesian) statistics. The ultimate objective is to translate analytical data into solid evidence.&lt;/p&gt;
+
+        </description>
+        <timetable>
+        </timetable>
+        <lecture_material>
+
+            &lt;p&gt;Class handouts will be augmented by a number of (review) articles.&lt;/p&gt;
+
+        </lecture_material>
+        <goals>
+
+            &lt;p&gt;At the end of the course the student must be able to&lt;/p&gt;
+            &lt;ul class="bullets-outside"&gt;
+            &lt;li&gt;explain the essence of analytical methods, sampling and sample-preparation techniques used in forensic science; &lt;/li&gt;
+            &lt;li&gt;describe the possibilities and limitations of these methods;&lt;/li&gt;
+            &lt;li&gt;select appropriate analytical and sample-preparation methods for specific forensic questions;&lt;/li&gt;
+            &lt;li&gt;explain the special (quality) requirements for sample-handling and measurements in forensic analytical chemistry;&lt;/li&gt;
+            &lt;li&gt;interpret analytical data using forensic statistics.&lt;/li&gt;
+            &lt;/ul&gt;
+
+        </goals>
+        <participant_count>
+        </participant_count>
+        <specialities>
+        </specialities>
+        <examination>
+
+            &lt;p&gt;The course has an open-book exam in which the student’s understanding of the subject is addressed.  Interpretation skills will be assessed by computer-based exercises.&lt;/p&gt;
+
+        </examination>
+    </course>
+    <course acode="HTLK" code="105217002" sgid="105217002">
+        <name>Theorie en praktijk van het vertalen </name>
+        <ects>
+            12
+        </ects>
+        <year>
+        </year>
+        <period>
+            Semester 2 blok 1 en 2
+        </period>
+        <institute>
+            Taal- en letterkunde
+        </institute>
+        <staff_list>
+            <staff id="9074">
+                <name> dr. E.R.G. Metz </name>
+                <url> http://studiegids.uva.nl/web/uva/sgs/nl/d/9074.html </url>
+            </staff>
+        </staff_list>
+        <programmes>
+            <programme id="942">
+                <name> Keuzevakken en minors Taal- en letterkunde (BA) </name>
+                <url> http://studiegids.uva.nl/web/uva/sgs/nl/p/942.html </url>
+            </programme>
+        </programmes>
+        <description>
+
+            &lt;p&gt;De cursus bestaat uit een theoretisch en een praktisch gedeelte. In het theoretische gedeelte wordt een overzicht gegeven van de verschillende soorten vertaling: schriftelijk versus mondeling, interlinguaal versus intralinguaal en intersemiotisch etc. Het historisch overzicht van het denken over vertalen vormt de aanleiding tot een systematisch overzicht van hedendaagse vertaalopvattingen en van terugkerende discussies in de reflectie over het vertalen. Aandacht gaat naar de culturele context van het vertalen, evenals naar sociologische factoren, bv. de positie van de vertaler op de arbeidsmarkt. In het tweede, praktische gedeelte, worden uiteenlopende aspecten van het vertaalproces behandeld, zoals de omgang met semantische en stilistische problemen (polysemie, dialecten…) en het gebruik van hulpmiddelen ( computer aided translation e.a.). De theoretische inzichten worden in werkcolleges toegepast op tekstmateriaal dat betrekking heeft op de taal of talen waar de student zich in specialiseert. Daarbij komen zowel literaire als niet-literaire tekstgenres aan bod. &lt;/p&gt;
+
+        </description>
+        <timetable>
+
+            &lt;p&gt;volgt&lt;/p&gt;
+
+        </timetable>
+        <lecture_material>
+
+            &lt;p&gt;volgt&lt;/p&gt;
+
+        </lecture_material>
+        <goals>
+
+            &lt;p&gt;De student heeft een inzicht in de geschiedenis van het denken over vertalen en is vertrouwd met de belangrijkste theoretische modellen en concepten van de hedendaagse vertaalwetenschap. Hij is in staat verschillende tekstsoorten te onderscheiden en de daarmee verbonden vertaalproblemen te detecteren en te analyseren. Hij past de verworven theoretische inzichten toe op vertalingen uit en naar de taal of talen die hij bestudeert, evenals op zijn eigen vertaalactiviteit.&lt;/p&gt;
+
+        </goals>
+        <participant_count>
+        </participant_count>
+        <specialities>
+        </specialities>
+        <examination>
+
+            &lt;p&gt;volgt&lt;/p&gt;
+
+        </examination>
+    </course>
+    <course acode="POW" code="70230270AT" sgid="70230270AT">
+        <name>Onderwijssociologie </name>
+        <ects>
+            6
+        </ects>
+        <year>
+            2012-2013
+        </year>
+        <period>
+            Semester 1 blok 1
+        </period>
+        <institute>
+            College Pedagogiek, Onderwijskunde en Lerarenopleiding
+        </institute>
+        <staff_list>
+            <staff id="4751">
+                <name> drs. E.J.C. Wendrich </name>
+                <url> http://studiegids.uva.nl/web/uva/sgs/nl/d/4751.html </url>
+            </staff>
+        </staff_list>
+        <programmes>
+            <programme id="191">
+                <name> Bachelor Onderwijskunde </name>
+                <url> http://studiegids.uva.nl/web/uva/sgs/nl/p/191.html </url>
+            </programme>
+            <programme id="885">
+                <name> Minor Onderwijskunde </name>
+                <url> http://studiegids.uva.nl/web/uva/sgs/nl/p/885.html </url>
+            </programme>
+        </programmes>
+        <description>
+
+            &lt;p&gt;&lt;/p&gt;
+            &lt;p&gt;Algemeen gesproken is de module opgezet als een plaatsing van het onderwijs in wat in de sociologie de dynamiek van de moderniteit wordt genoemd.    
+
+            &lt;br/&gt;Deze plaatsing krijgt gestalte in twee hoofdonderwerpen. Allereerst worden veranderingen in het onderwijs in verband gebracht met het hedendaagse streven naar economische groei, “innovatie” en versterking van nationale concurrentiekracht. Daarbij zal de aandacht onder meer uitgaan naar veranderingen in en de publieke en intellectuele gedachtewisseling over het beroeps – en algemeen vormend onderwijs. 
+
+            &lt;br/&gt;Onder de noemer Subjectivering en Onderwijs komt een twee hoofdthema aan de orde. Dit bestaat in de kern in een situering van het onderwijs in de context van nieuwe maatschappelijke spanningsverhoudingen en een plaatsing van onderwijs in het perspectief van de vorming van actieve, maatschappelijk creatieve individuen. Een en ander zal worden georganiseerd rond een bespreking van denkbeelden van de socioloog Alain Touraine.  
+
+            &lt;br/&gt;Afgesloten wordt met aandacht voor en vragen over management en professionaliteit in het onderwijs van nu en in de toekomst.  
+
+            &lt;br/&gt;Aldus opgezet sluit de module aan op de onderdelen Onderwijskunde CTP I en II in het tweede jaar en komen verworven inzichten van pas in later te volgen modulen op het terrein van onderwijsbeleid en curriculum(ontwikkeling). 
+
+            &lt;/p&gt;
+
+        </description>
+        <timetable>
+
+            &lt;p&gt;Woensdagmiddag 13-17 uur.&lt;/p&gt;
+
+        </timetable>
+        <lecture_material>
+
+            &lt;p&gt;Reader Onderwijssociologie verkrijgbaar bij de Onderwijsbalie.&lt;/p&gt;
+
+        </lecture_material>
+        <goals>
+
+            &lt;p&gt;- Verwerving van funderende kennis en inzichten op het gebied van een sociologische benadering  van veranderingen van/in het onderwijs.
+
+            &lt;br/&gt;- Verwerving van vermogens om vanuit verschillende sociologische gezichtspunten hedendaagse veranderingen in het onderwijs en de daarin besloten liggende ambivalenties en spanningen maatschappelijk-historisch te situeren en interpreteren. 
+
+            &lt;br/&gt;- Verwerving van het vermogen om vanuit sociologische gezichtspunten beleidsmatige en praktische vragen in mogelijke onderzoeksvragen te herformuleren. 
+
+            &lt;br/&gt;- Bijdragen aan de versterking van een academische houding in het algemeen en die m.b.t. een sociologische gevoeligheid in het bijzonder.    
+
+            &lt;/p&gt;
+
+        </goals>
+        <participant_count>
+        </participant_count>
+        <specialities>
+        </specialities>
+        <examination>
+
+            &lt;p&gt;Take-home tentamen&lt;/p&gt;
+
+        </examination>
+    </course>
+    <course acode="HTLK" code="129111042" sgid="129111042">
+        <name>Sleutelbegrippen </name>
+        <ects>
+            12
+        </ects>
+        <year>
+        </year>
+        <period>
+            Semester 2 blok 1 en 2
+        </period>
+        <institute>
+            Taal- en letterkunde
+        </institute>
+        <staff_list>
+            <staff id="9266">
+                <name> mw. dr. N. Roei </name>
+                <url> http://studiegids.uva.nl/web/uva/sgs/nl/d/9266.html </url>
+            </staff>
+            <staff id="9298">
+                <name> mw. dr. J.V. Sturm </name>
+                <url> http://studiegids.uva.nl/web/uva/sgs/nl/d/9298.html </url>
+            </staff>
+            <staff id="9013">
+                <name> mw. dr. A.L.B. Van Weyenberg </name>
+                <url> http://studiegids.uva.nl/web/uva/sgs/nl/d/9013.html </url>
+            </staff>
+        </staff_list>
+        <programmes>
+            <programme id="472">
+                <name> Bachelor Literatuurwetenschap </name>
+                <url> http://studiegids.uva.nl/web/uva/sgs/nl/p/472.html </url>
+            </programme>
+        </programmes>
+        <description>
+
+            &lt;p&gt;De culturele vakken (literatuur, film, nieuwe media, beeldende kunst) maken in toenemende mate gebruik van gedeelde theoretische begrippen, zoals representatie, vertoog, tekstualiteit en intertekstualiteit, verlangen, subject, gender, ideologie, interdisciplinariteit en performativiteit. Tijdens de cursus worden deze basisbegrippen uit de literatuur- en cultuurtheorie ingeleid en ingezet in de analyse van literaire teksten en diverse culturele objecten.&lt;/p&gt;
+
+        </description>
+        <timetable>
+        </timetable>
+        <lecture_material>
+        </lecture_material>
+        <goals>
+
+            &lt;p&gt;Kennis van en inzicht in de theoretisering van centrale begrippen uit de literatuur- en cultuurtheorie; vaardigheid in het toepassen ervan op verschillende teksten en objecten; vaardigheid in het uitwerken en beschrijven van een beperkt literatuurwetenschappelijk onderzoek.  &lt;/p&gt;
+
+        </goals>
+        <participant_count>
+        </participant_count>
+        <specialities>
+        </specialities>
+        <examination>
+
+            &lt;p&gt;Groepsopdracht, eindpaper&lt;/p&gt;
+
+        </examination>
+    </course>
+    <course acode="OWIN" code="NA402486" sgid="5354NIPR6Y">
+        <name>Nikhef Project </name>
+        <ects>
+            6
+        </ects>
+        <year>
+        </year>
+        <period>
+            Semester 2, voertaal English
+        </period>
+        <institute>
+            Masters School of Sciences
+        </institute>
+        <staff_list>
+            <staff id="3946">
+                <name> prof.dr. P.M. Kooijman </name>
+                <url> http://studiegids.uva.nl/web/uva/sgs/nl/d/3946.html </url>
+            </staff>
+        </staff_list>
+        <programmes>
+            <programme id="37">
+                <name> Master's in Physics, track Particle and Astroparticle Physics </name>
+                <url> http://studiegids.uva.nl/web/uva/sgs/nl/p/37.html </url>
+            </programme>
+        </programmes>
+        <description>
+
+            &lt;p&gt;During the Nikhef project, students will design and build their own particle detector, use this detector to take data and analyse the collected data. Every year, it will be a different detector suitable for a particular measurement. It can be a water Cherenkov detector to detect cosmic muons, a scintillator detector to measure the velocity of charged particles or a calorimeter to measure the energy of particles. 
+
+            &lt;br/&gt;It is the intention that students will experience the working environment of (astro)particle physicists. It is the responsibility of the participating students to define and assign tasks and make a planning for the full process of the design of a particle detector. 
+
+            &lt;/p&gt;
+
+        </description>
+        <timetable>
+
+            &lt;p&gt;The course will be scheduled on Monday during the full second semester. However, due to the nature of the project, you will not be working on the project every week of this period. Please contact the coordinator for more information. &lt;/p&gt;
+
+        </timetable>
+        <lecture_material>
+
+            &lt;p&gt;Will be distributed at the start of the project.&lt;/p&gt;
+
+        </lecture_material>
+        <goals>
+
+            &lt;p&gt;The objective of this course is to introduce students in the project management of designing, building and operating a particle detector.&lt;/p&gt;
+
+        </goals>
+        <participant_count>
+        </participant_count>
+        <specialities>
+        </specialities>
+        <examination>
+
+            &lt;p&gt;Written report.&lt;/p&gt;
+
+        </examination>
+    </course>
+    <course acode="HMED" code="118210012" sgid="118210012">
+        <name>Capita selecta: informatiewetenschap </name>
+        <ects>
+            12
+        </ects>
+        <year>
+        </year>
+        <period>
+            Semester 1 blok 1 en 2
+        </period>
+        <institute>
+            Mediastudies
+        </institute>
+        <staff_list>
+            <staff id="8359">
+                <name> mw. T. Navarrete Hernandez </name>
+                <url> http://studiegids.uva.nl/web/uva/sgs/nl/d/8359.html </url>
+            </staff>
+        </staff_list>
+        <programmes>
+            <programme id="498">
+                <name> Bachelor Culturele informatiewetenschap </name>
+                <url> http://studiegids.uva.nl/web/uva/sgs/nl/p/498.html </url>
+            </programme>
+        </programmes>
+        <description>
+
+            &lt;p&gt;Capita Selecta is een bijzondere module waarin je leert over het onderzoek van CIW onderzoekers via specifieke onderwerpen. Deze keer gaat het om de geschiedenis van de digitalisering in Nederlandse musea. Tijdens deze module maak je deel uit van een vijfjarig onderzoek naar de factoren die invloed hebben gehad op het digitaliseren van de Nederlandse musea tussen 1970 en 2011. Je krijgt inzicht in de nationale context van digitaliseren, dat wilt zeggen de adoptie van informatietechnologie (computers en netwerk) voor het organiseren en presenteren van musea en hun objecten. Vijf gebieden worden achtereenvolgens behandeld: 1) het nationaal beleid, zoals vastgesteld door het Ministerie van Cultuur, bij de sectorinstituten en bij de musea zelf; 2) de veranderingen in de musea als instituut; 3) de bronnen van financiering en het gebruik van middelen voor digitale activiteiten (zoals de subsidie voor automatisering); 4) de relatie tussen de musea en hun publiek en 5) het digitaliseren van musea in een internationale&lt;/p&gt;
+
+        </description>
+        <timetable>
+
+            &lt;p&gt;2 x 2 uur per week&lt;/p&gt;
+
+        </timetable>
+        <lecture_material>
+
+            &lt;p&gt;Artikelen, beleidsdocumenten, boeken.&lt;/p&gt;
+
+        </lecture_material>
+        <goals>
+
+            &lt;p&gt;Na afloop van dit vak is de student in staat om:&lt;/p&gt;
+            &lt;ul class="bullets-outside"&gt;
+            &lt;li&gt;de belangrijkste elementen te beheren in de ontwikkelingen rond digitalisering die in de Nederlandse musea hebben plaatsgevonden.&lt;/li&gt;
+            &lt;li&gt;	het proces van digitaliseren te benoemen (inclusief beleid, financiën, technologie, organisatorische veranderingen en de relatie tussen de instelling en het publiek).&lt;/li&gt;
+            &lt;li&gt;	de verschillen tussen de digitaliseringprocessen in Nederlandse en buitenlandse musea te identificeren.&lt;/li&gt;
+            &lt;li&gt;	strategisch te denken tijdens de analyse van digitaliseringprojecten.&lt;/li&gt;
+            &lt;li&gt;	zelf CIW theorieën te kunnen toepassen.&lt;/li&gt;
+            &lt;li&gt;	de in dit vak behandelde ontwikkelingen kritisch te analyseren.  &lt;/li&gt;
+            &lt;/ul&gt;
+
+        </goals>
+        <participant_count>
+        </participant_count>
+        <specialities>
+        </specialities>
+        <examination>
+
+            &lt;p&gt;schriftelijke opdracht; presentatie; groepsdiscussie
+
+            &lt;/p&gt;
+
+        </examination>
+    </course>
+    <course acode="POLA" code="7324V202ZY" sgid="7324V202ZY">
+        <name>Research Project: The Political Economy of Energy </name>
+        <ects>
+            30
+        </ects>
+        <year>
+            2012-2013
+        </year>
+        <period>
+            Semester 2, voertaal English
+        </period>
+        <institute>
+            Graduate school of Social Sciences
+        </institute>
+        <staff_list>
+            <staff id="1080">
+                <name> dr. M.P. Amineh </name>
+                <url> http://studiegids.uva.nl/web/uva/sgs/nl/d/1080.html </url>
+            </staff>
+        </staff_list>
+        <programmes>
+            <programme id="48">
+                <name> Master Politicologie </name>
+                <url> http://studiegids.uva.nl/web/uva/sgs/nl/p/48.html </url>
+            </programme>
+            <programme id="58">
+                <name> Master's in International Relations </name>
+                <url> http://studiegids.uva.nl/web/uva/sgs/nl/p/58.html </url>
+            </programme>
+        </programmes>
+        <description>
+
+            &lt;p&gt;The purpose of the part of the research project is to enable its participants to develop the skills required to design and execute a research project, on the basis of which an MA thesis will ultimately be produced. The Research project will familiarize students with the essential International Relations and International Political Economy-research tools and writing techniques as well as sources of data participants will use during their research. Participants have a wide area of choice to draft their research proposals. However, thesis topics should relate to the topics covered by Research Project and therefore have to be mutually agreed upon between the student and the coordinator. &lt;/p&gt;
+            &lt;p&gt;The main example of possible research topics are the following ones: - What are the opportunities and challenges with which the main consumer countries and regions (such as the EU, the US, China, India and Japan) are confronted with in search of energy resources (mainly located in the Middle East, the Caspian region and Africa) to maintain an adequate security of energy supply? - What are the possibilities and impediments for the establishment of a European Union common energy foreign policy and how will it relate to national energy policies? - What is the effect of the current relations between states based Transnational Oil Companies (i.e. Chinese National Petroleum Company; Gazprom, Saudi-Aramco, National Iranian Oil Company, Petroleos de Venezuela S.A.) and private based transnational oil companies (e.g. Royal Dutch Shell; Exxon Mobil; British Petroleum; Chevron) on the security of energy supply and the role energy foreign policy can play? - Is investing in nuclear power an efficient strategy for producing clean energy for the EU and China in the long run? Or is it better to invest the same resources into energy efficiency, alternative energy sources such as biofuel, solar, wind, hydrogen) and conservation policies? &lt;/p&gt;
+            &lt;p&gt;For an overview of the selected successful completed MA-theses of the Research Project-The Political Economy of Energy, see the following website: Energy Program Asia-International Institute for Asian Studies: 
+
+            &lt;a href="http://www.IIAS.nl/epa "&gt;http://www.IIAS.nl/epa &lt;/a&gt;
+            &lt;/p&gt;
+
+        </description>
+        <timetable>
+
+            &lt;p&gt;Please check the course schedules on 
+
+
+
+
+            &lt;a href="http://rooster.uva.nl"&gt;http://rooster.uva.nl&lt;/a&gt;.  
+
+
+
+
+
+            &lt;/p&gt;
+
+        </timetable>
+        <lecture_material>
+
+            &lt;p&gt;Literature will be downloadable from the digital library and blackboard. &lt;/p&gt;
+
+        </lecture_material>
+        <goals>
+
+            &lt;p&gt;The research project –The Political Economy of Energy - focuses on two policy areas: &lt;/p&gt;
+            &lt;p&gt;[I] the study of energy (oil/gas) supply security policies of the main energy consuming, import-dependent, countries, viz. China, European Union [EU], United States [US], Japan and India. Currently, each of these get supplies from the main resource-rich countries of the Middle East (e.g. Saudi-Arabia, Iran, Iraq, and the Persian Gulf States), Central Asia and Caucasus (e.g. Kazakhstan, Turkmenistan, Azerbaijan), Latin America (e.g. Venezuela), Africa (e.g. Sudan, Angola, Algeria ) and also Russia. It should be noted that non –conventional sources of fossil fuel [mainly tar sand oil &amp;amp; shale gas] are expected to change the geopolitics of energy supply security, in particular of the US, China and to a lesser extent, the EU. &lt;/p&gt;
+            &lt;p&gt;[II] the study of energy efficiency, alternatives to fossil fuel based energy from renewable sources of energy is both ends in itself and contribute to energy security and sustainable development. &lt;/p&gt;
+            &lt;p&gt;Since the end of the Cold War, states and non-state actors have assigned more significance to economic and resource concerns. Conflicts over the control and security of global scare resources mainly oil and gas become more probable as global oil and gas consumption and import rise, environmental conditions deteriorate availability of oil and gas decreases and prices for these commodities rise, in particular of oil.. These conflicts are neither zero-sum nor purely bilateral and have aspects beyond energy. For examples: the U.S. tries to wean China off from Iranian oil by promoting Chinese access to Iraq. Internal conflicts over oil and gas could arise in countries (such as Saudi Arabia, Iraq, Iran, Kazakhstan, Azerbaijan, Algeria and Sudan), where these resources are the main source of income and are accompanied by ethnic hostility, economic injustice, and political competition. This could have a great effect of security of global oil and gas production and supply. Energy security is also affected by environmental constraints and impacted by advances in technology. Where pollution creates both domestic and cross-border tensions, innovations in alternative and renewable resources, such as biofuels, wind, solar, alongside efficiency measures, can reduce energy import dependence and contribute to reducing greenhouse gas emissions. Apart from time and money, such energy infrastructure transitions also necessitate continued government and popular support. Nevertheless, as conventional oil, and may be over time gas as well, become increasingly scarce, developing innovative technologies is the only long-term alternative. &lt;/p&gt;
+
+        </goals>
+        <participant_count>
+
+            &lt;p&gt;Number of participants: max 10.&lt;/p&gt;
+
+        </participant_count>
+        <specialities>
+        </specialities>
+        <examination>
+
+            &lt;p&gt;MA-Thesis. Please see the thesis manual at: 
+
+            &lt;a href="http://www.student.uva.nl/mpol/downloads.cfm"&gt;http://www.student.uva.nl/mpol/downloads.cfm&lt;/a&gt;
+            &lt;/p&gt;
+
+        </examination>
+    </course>
+    <course acode="HKRC" code="102010002" sgid="102010002">
+        <name>Capita Selecta European Art 1850</name>
+        <ects>
+            12
+        </ects>
+        <year>
+        </year>
+        <period>
+            Semester 1 block 1 and 2, voertaal English
+        </period>
+        <institute>
+            Department of Art, Religion and Cultural Sciences
+        </institute>
+        <staff_list>
+        </staff_list>
+        <programmes>
+            <programme id="951">
+                <name> Undergraduate Certificate Programme in Humanities (for Exchange students) </name>
+                <url> http://studiegids.uva.nl/web/uva/sgs/nl/p/951.html </url>
+            </programme>
+        </programmes>
+        <description>
+
+            &lt;p&gt;In this course we will study a number of artists and styles from the late 18th to the late 19th century. We will start off with romantic artists such as Goya and Caspar David Friedrich, then we will study realists like Courbet and Manet and we will end with modern artists such as Van Gogh and Edward Munch. We will see how the outlook of these people changed and how this is reflected in their work. We will also investigate why certain works of art transcend the boundaries of time and place, become "Classic" while other masterpieces remain time and place specific. If the lecturer deems it necessary the class content can be changed.&lt;/p&gt;
+
+        </description>
+        <timetable>
+
+            &lt;p&gt;3 hour seminar per week.&lt;/p&gt;
+
+        </timetable>
+        <lecture_material>
+
+            &lt;p&gt;To be announced.&lt;/p&gt;
+
+        </lecture_material>
+        <goals>
+
+            &lt;p&gt;At the end of the course students will be able to identify and recognize the main trends and developments of European art in from 1850 to World War II. Students will also get to understand art within its historical context.&lt;/p&gt;
+
+        </goals>
+        <participant_count>
+
+            &lt;p&gt;Max. 25.&lt;/p&gt;
+
+        </participant_count>
+        <specialities>
+        </specialities>
+        <examination>
+
+            &lt;p&gt;Student presentations, student participation during the classes, an exam consisting of a slide-overview and a paper will be ways to assess the students input during this course. Attendance is obligatory.&lt;/p&gt;
+
+        </examination>
+    </course>
+    <course acode="OWII" code="5274COCS6Y" sgid="5274COCS6Y">
+        <name>Complex Crime Scenes </name>
+        <ects>
+            6
+        </ects>
+        <year>
+            1
+        </year>
+        <period>
+            Semester 1 block 3, voertaal English
+        </period>
+        <institute>
+            Graduate School of Professional Science
+        </institute>
+        <staff_list>
+            <staff id="4858">
+                <name> dr. L.H. Cammeraat </name>
+                <url> http://studiegids.uva.nl/web/uva/sgs/nl/d/4858.html </url>
+            </staff>
+            <staff id="9389">
+                <name> mw. I.O. O'Sullivan </name>
+                <url> http://studiegids.uva.nl/web/uva/sgs/nl/d/9389.html </url>
+            </staff>
+            <staff id="1789">
+                <name> mw. dr. E. Smits </name>
+                <url> http://studiegids.uva.nl/web/uva/sgs/nl/d/1789.html </url>
+            </staff>
+        </staff_list>
+        <programmes>
+            <programme id="941">
+                <name> Master's in Forensic Science </name>
+                <url> http://studiegids.uva.nl/web/uva/sgs/nl/p/941.html </url>
+            </programme>
+        </programmes>
+        <description>
+
+            &lt;p&gt;The following topics/subjects will be addressed:&lt;/p&gt;
+            &lt;ul class="bullets-outside"&gt;
+            &lt;li&gt;Search Technique including equipment and methods most commonly used.&lt;/li&gt;
+            &lt;li&gt;Large Scale Investigations – the Police approach&lt;/li&gt;
+            &lt;li&gt;Forensic Microtraces including working with hypotheses&lt;/li&gt;
+            &lt;li&gt;Non-Human DNA&lt;/li&gt;
+            &lt;li&gt;Toxicology&lt;/li&gt;
+            &lt;li&gt;Forensic Botany – both lecture and practical&lt;/li&gt;
+            &lt;li&gt;Forensic Entomology&lt;/li&gt;
+            &lt;li&gt;Forensic Geography&lt;/li&gt;
+            &lt;li&gt;Digital Forensics including lectures and practicals on: Search engines, Machine learning and text/data mining, Language Technology/Natural language processing, Social structure, Visualization and E-discovery&lt;/li&gt;
+            &lt;li&gt;Crime Scene visualization techniques will be introduced&lt;/li&gt;
+            &lt;li&gt;Mock Crime Scene – students will process a simulated crime scene, write a crime scene report and give a brief presentation of their findings&lt;/li&gt;
+            &lt;li&gt;Forensic Archaeology and Mass Graves&lt;/li&gt;
+            &lt;li&gt;Human Remains&lt;/li&gt;
+            &lt;/ul&gt;
+
+        </description>
+        <timetable>
+        </timetable>
+        <lecture_material>
+
+            &lt;p&gt;Study material will be assigned by the respective lectures – where pre-reading/preparation is required, students will be informed via blackboard. Recommended reading will be placed on Blackboard.  Assignment reading will be placed on Blackboard.&lt;/p&gt;
+
+        </lecture_material>
+        <goals>
+
+            &lt;ul class="bullets-outside"&gt;
+            &lt;li&gt;Understand the principles of crime scene investigations and the hierarchy of responsibilities within complex crimes.&lt;/li&gt;
+            &lt;li&gt;Differentiate between standard crime scenes and complex crime scenes and recognize the “triggers” that suggest a crime under investigation is a complex crime.&lt;/li&gt;
+            &lt;li&gt;Describe the methods used during a crime scene examination and explain the scientific basis of those methods.&lt;/li&gt;
+            &lt;li&gt;Recognize how to rank potential scientific evidence.&lt;/li&gt;
+            &lt;li&gt;Describe the principles of at least three of the most frequently used techniques and their applications in forensic investigations.&lt;/li&gt;
+            &lt;li&gt;Have a basic knowledge of the theory and application of scientific principles and techniques involved in digital crime scenes.&lt;/li&gt;
+            &lt;li&gt;Are able to reproduce, describe the principles of, and apply current computer science techniques in the context of digital crime scenes&lt;/li&gt;
+            &lt;li&gt;Are able to order, select, and apply relevant computer science techniques to (parts of) a digital crime scene and are able to exemplify the techniques used.&lt;/li&gt;
+            &lt;li&gt;Undertake the investigation of a simulated crime scene, including arranging the division of labour within the investigation team and the subsequent report.&lt;/li&gt;
+            &lt;li&gt;Are aware of the strength and weaknesses, limitations and pitfalls of forensic techniques including computer science techniques and are able to describe the factors influencing the quality of each technique.&lt;/li&gt;
+            &lt;li&gt;Exemplify the types of protocols (at least three types) that one would expect to utilize at a complex crime scene, particularly the various protocols and guidelines applied in international investigations&lt;/li&gt;
+            &lt;li&gt;Interpret and communicate the results of the examination of the simulated crime scene&lt;/li&gt;
+            &lt;/ul&gt;
+
+        </goals>
+        <participant_count>
+        </participant_count>
+        <specialities>
+
+            &lt;p&gt;The Mock Crime Scene will take place at the Police Academy Lectures in Non-Human DNA and Toxicology will take place at the NFI. Students are require to pass all elements (examination and assignments) of the module in order to pass the module.
+
+            &lt;/p&gt;
+
+        </specialities>
+        <examination>
+
+            &lt;p&gt;There are both practical and written assessments on the course. There is a three hour examination at the end of the module.&lt;/p&gt;
+            &lt;p&gt;Practical:           &lt;/p&gt;
+            &lt;ul class="bullets-outside"&gt;
+            &lt;li&gt;Essay – 15%&lt;/li&gt;
+            &lt;li&gt;Digital Forensic – students are required to undertake daily assignments (set by the lecturer) which will culminate in an overall report at the end of the week – 15%&lt;/li&gt;
+            &lt;li&gt;Mock Crime Scene – students are expected to submit a collective report and present their findings to the class in the form of a brief presentation – 20%&lt;/li&gt;
+            &lt;li&gt;Written Examination – 50% &lt;/li&gt;
+            &lt;/ul&gt;
+
+        </examination>
+    </course>
+    

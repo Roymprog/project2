@@ -1,8 +1,31 @@
 <h1>Search courses</h1>
 
 <%= form_tag("/search", :method => "get") do %>
-  <%= label_tag(:q, "Title:") %>
-  <%= text_field_tag(:q) %>
+  <%= label_tag(:n, "Name:") %>
+  <%= text_field_tag(:n) %>
+  <br>
+  <%= label_tag(:i, "Institute:") %>
+  <%= text_field_tag(:i) %>
+  <br>
+  <%= label_tag(:c, "Catalog number:") %>
+  <%= text_field_tag(:c) %>
+   <br>
+  <%= label_tag(:ec, "Credits (EC):") %>
+  <%= text_field_tag(:ec) %>
+  <br>
+  <%= label_tag(:m, "Maximum participants (Max.):") %>
+  <%= text_field_tag(:m) %>
+  <br>
+  <%= label_tag(:p, "Semester:") %>
+  <%= text_field_tag(:p) %>
+  <%= label_tag(:b, "Blok:") %>
+  <%= text_field_tag(:b) %>
+  <br>
+  <%= label_tag(:s, "Staff:") %>
+  <%= text_field_tag(:s) %>
+  <br>
+  <%= label_tag(:d, "Description:") %>
+  <%= text_field_tag(:d) %>
   <%= submit_tag("Search") %>
 <% end %>
 
