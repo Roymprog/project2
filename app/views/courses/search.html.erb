@@ -17,9 +17,9 @@
   <%= text_field_tag(:m) %>
   <br>
   <%= label_tag(:p, "Semester:") %>
-  <%= text_field_tag(:p) %>
+  <%= select_tag(:p, options_for_select([['1', "1"], ['2',"2"]])) %>
   <%= label_tag(:b, "Blok:") %>
-  <%= text_field_tag(:b) %>
+  <%= select_tag(:b, options_for_select([['any', ""],['1', "blok 1"], ['2', "blok 2"],  ['3', "blok 3"], ['1 en 2', "blok 1 en 2"], ['1 en 3', "blok 1 en 3"], ['2 en 3', "blok 2 en 3"],  ['1 en 2 en 3', "blok 1 en 2 en 3"]])) %>
   <br>
   <%= label_tag(:s, "Staff:") %>
   <%= text_field_tag(:s) %>

@@ -48,7 +48,7 @@ def create
                             id = id AND
                             maximum like '%" + params[:m] + "%' AND
                             blok like '%" 'semester ' + params[:p] + "%' AND
-                            blok like '%" 'blok ' + params[:b] + "%'")
+                            blok like '%" + params[:b] + "%'")
     
     respond_to do |format|
       format.html 
