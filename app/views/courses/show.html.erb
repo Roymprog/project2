@@ -45,6 +45,26 @@
   <%= @course.description %>
 </p>
 
+<script>
+  function bookmark(name, id)
+  { 
+    index = localStorage["BookmarkArraySize"];
+    localStorage["BookmarkArray"][index] = name;
+    localStorage["Bookmark" + id + ""] =  name;
+    
+    alert("Bookmarked course!");
+  }
+</script>
 
-<%= link_to 'Edit', edit_course_path(@course) %> |
+<script>
+  function take(name, id)
+  {
+    localStorage["Taking" + id + ""] =  name;
+    alert("Subscribed to course!");
+  }
+</script>
+
+<button onclick="bookmark('<%=@course.name%>', '<%=@course.id%>')">Bookmark!</button>
+<button onclick="take('<%=@course.name%>', '<%=@course.id%>')">Take course!</button>
+
 <%= link_to 'Back', courses_path %>

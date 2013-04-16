@@ -7,6 +7,7 @@ class CreateCourses < ActiveRecord::Migration
       t.integer :ec
       t.string :staff
       t.string :maximum
+      t.string :period
       t.string :blok
       t.string :programme
       t.text :description

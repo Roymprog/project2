@@ -1,7 +1,9 @@
 <h1>Listing courses</h1>
 
 <%= link_to 'Search Course', search_courses_path %>
-
+<br>
+<%= link_to 'Bookmarked courses', bookmarked_courses_path %>
+<br>
 <table>
   <tr>
     <th>Course's name</th>
@@ -19,7 +21,7 @@
     <td><%= course.institute %></td>
     <td><%= course.ec %></td>
     <td><%= course.staffs.map(&:name).join(",") %></td>
-    <td><%= course.blok %></td>
+    <td><%= course.period %></td>
     <td><%= link_to 'Show', course %></td>
     <td><%= link_to 'Delete', course, method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>

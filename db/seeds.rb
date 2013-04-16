@@ -7,14 +7,15 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 
-f = File.open("course.xml")
+f = File.open("courses.xml")
 @doc = Nokogiri::XML(f)
 @doc.xpath("/courses/course").each do |course|
 	
 	c = Course.create(:catalog_number => course.xpath("@sgid").text.strip,
 		 		  	  :name => course.xpath("name").text.strip,
 					  :ec => course.xpath("ects").text.strip,
-					  :blok => course.xpath("period").text.strip.gsub(/[c,]/, 'e' => '', ',' => ' en').downcase,
+					  :period => course.xpath("period").text.strip.downcase,
+					  :blok => course.xpath("period").text.strip.gsub(/Semester 1/, '').gsub(/Semester 2/, '').gsub(/[c]/, '').gsub(/and/, 'en').downcase,
 					  :institute => course.xpath("institute").text.strip,
 					  :description => course.xpath("description").text.strip,
 					  :maximum => course.xpath("participant_count").text.strip)

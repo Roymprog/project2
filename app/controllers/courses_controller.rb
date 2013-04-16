@@ -35,25 +35,30 @@ def create
     end
   end
 
-  def bookmark
+  def bookmarked
+    @courses = Course.all
+
+    respond_to do |format|
+      format.html # index.html.erb
+      format.json { render json: @courses }
+    end
   end
 
   def result
-    id = Staff.where("name like '%" + params[:s] + "%'").first.courses.first.id
+    ids = Staff.where("name like '%" + params[:s] + "%'").map(&:courses).flatten(1).map(&:id)
     @results = Course.where("name like '%" + params[:n] + "%' AND 
                             institute like '%" + params[:i] + "%' AND
                             catalog_number like '%" + params[:c] + "%' AND
                             ec like '%" + params[:ec] + "%' AND
                             description like '%" + params[:d] + "%' AND
-                            id = id AND
+                            id in (?) AND
                             maximum like '%" + params[:m] + "%' AND
-                            blok like '%" 'semester ' + params[:p] + "%' AND
-                            blok like '%" + params[:b] + "%'")
-    
+                            period like '%" 'semester ' + params[:p] + "%' AND
+                            blok like '%" + params[:b] + "%'", ids)
+    end
     respond_to do |format|
       format.html 
       format.json { render json: @results }
-    end
   end
 
 def update

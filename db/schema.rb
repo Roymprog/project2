@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(:version => 20130410111257) do
     t.integer  "ec"
     t.string   "staff"
     t.string   "maximum"
+    t.string   "period"
     t.string   "blok"
     t.string   "programme"
     t.text     "description"

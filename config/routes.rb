@@ -1,7 +1,8 @@
 Project2::Application.routes.draw do
   resources :courses do
     collection do  
-      get 'search' 
+      get 'search'
+      get 'bookmarked'
     end
   end
  
