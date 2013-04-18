@@ -1,31 +1,136 @@
-<h1>Listing courses</h1>
+<head>
+<title>Bookmarked</title>
 
-<%= link_to 'Search Course', search_courses_path %>
+<script>
 
-<table>
-  <tr>
-    <th>Course's name</th>
-    <th>Institute</th>
-    <th>Ec</th>
-    <th>Staff</th>
-    <th>Blok</th>
-    <th></th>
-    <th></th>
-  </tr>
+	function destroy(course_id)
+	{
+		var array = JSON.parse(localStorage.getItem("bookmark"));
+	    var i = 0;
+	    while(JSON.stringify(array[i].id).replace(/['"]/g,'') != course_id) 
+	    {  
+	      i += 1;
+	    }
+	    var deleted_course_id = i;
+	    while(array[i])
+	    {
+	    	i += 1;
+	    }
+	    i -= 1;
+	    alert("You have deleted " + JSON.stringify(array[deleted_course_id].name) + "");
+	    array[deleted_course_id] = array[i];
+	    delete array[i];
+	    localStorage.setItem("bookmark", JSON.stringify(array));
+	}    
 
-<% @courses.each do |course| %>
-  <tr>
-    <td><%= course.name %></td>
-    <td><%= course.institute %></td>
-    <td><%= course.ec %></td>
-    <td><%= course.staffs.map(&:name).join(",") %></td>
-    <td><%= course.period %></td>
-    <td><%= link_to 'Show', course %></td>
-    <td><%= link_to 'Delete', course, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
-<% end %>
-</table>
+function subscribe_bookmarked(course_id)
+	{
+		// grabs array stored in "bookmark" in local storage
+		var bookmark_array = JSON.parse(localStorage.getItem("bookmark"));
+	    var i = 0;
 
-<br />
+	    // checks the whole array for the index of the right course
+	    while(JSON.stringify(bookmark_array[i].id).replace(/['"]/g,'') != course_id) 
+	    {  
+	      i += 1;
+	    }
+	    // remember id of subscribed course
+	    var subscribed_course_id = i;
+
+	    // fills new object for the "taking" courses database
+	    taking 	   =	new Object();
+	    taking.name    = 	JSON.stringify(bookmark_array[i].name).replace(/['"]/g,'');
+	    taking.id 	   =	JSON.stringify(bookmark_array[i].id).replace(/['"]/g,'');
+	    taking.credits = 	JSON.stringify(bookmark_array[i].credits).replace(/['"]/g,'');
+	    taking.catalog = 	JSON.stringify(bookmark_array[i].catalog).replace(/['"]/g,'');
+
+	    // grabs the array of "taking" courses
+	    var taking_array = JSON.parse(localStorage.getItem("taking"));
+	    // makes new array if there is no courses
+	    if(!taking_array)
+	    {
+	      taking_array = new Array();
+	    }
+
+	    // searches array for empty spot and checks if course is not already present
+	    i = 0;
+	    while (taking_array[i] && (JSON.stringify(taking_array[i]) != JSON.stringify(taking))) 
+	    {  
+	      i += 1;
+	    }
+
+	    // checks if empty spot or same course was found
+	    if (JSON.stringify(taking_array[i]) != JSON.stringify(taking))
+	    {
+	      // puts new object at the empty spot
+	      taking_array[i] = taking;
+	      
+	      // sets new array in local storage
+	      localStorage.setItem("taking", JSON.stringify(taking_array));
+	   	  
+	   	  // delete subscribed course from bookmarked
+	      i = subscribed_course_id;
+
+	      // looks for empty spot in array
+	      while(bookmark_array[i])
+	      {
+	      	i += 1;
+	      }
+	      
+	      // moves index to last occupied spot
+	      i -= 1;
+
+	      // copies last object to subscribed object's place
+	      bookmark_array[subscribed_course_id] = bookmark_array[i];
+
+	      // deletes last object from list
+	      delete bookmark_array[i];
+
+	      // sets new array in local storage
+	      localStorage.setItem("bookmark", JSON.stringify(bookmark_array));
+
+	      // alerts user that subscription was succesful
+  	      alert("You have subscribed to " + JSON.stringify(taking.name) + "");
+		}
+		// alerts user that course has already been subscribed to and keeps it at bookmarked courses
+	    else
+	    {
+	      alert("Failed to subscribe to " + JSON.stringify(taking.name) + ". Course already taken");
+	    }
+	}    
+</script>
+</head>
 
 
+
+<h1>Courses bookmarked</h1>
+<div>
+	<script>
+		var i = 0;
+		var courses = JSON.parse(localStorage.getItem("bookmark"));
+		alert(courses);
+		if (courses)
+		{
+			document.write("<table><tr><th>Course's name</th><th>EC</th></tr>");
+			while(courses[i])
+			{
+				document.write("<tr>");
+				document.write("<td><a href=/courses/" + courses[i].id + ">"+ courses[i].name +"</a></td><td>" + courses[i].credits + "</td>");
+				document.write("<td><button onclick=\"destroy("+ JSON.parse(courses[i].id) +")\">Delete</button></td>");
+				document.write("<td><button onclick=\"subscribe_bookmarked("+ JSON.parse(courses[i].id) +")\">Subscribe</button></td>");
+				document.write("</tr>");
+				i += 1;
+			}
+			document.write("</table>");
+		}
+		else
+		{
+			document.write("You have not bookmarked any courses");
+		}
+	</script>
+</div>
+
+<div>
+	<br>
+<%= link_to 'Bookmarked courses', bookmarked_courses_path %> | <%= link_to "Courses I'm taking", taking_courses_path %> | <%= link_to 'Search courses', search_courses_path %>
+</div>

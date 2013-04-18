@@ -46,25 +46,73 @@
 </p>
 
 <script>
-  function bookmark(name, id)
+  function bookmark(name, id, ec, catalog_number)
   { 
-    index = localStorage["BookmarkArraySize"];
-    localStorage["BookmarkArray"][index] = name;
-    localStorage["Bookmark" + id + ""] =  name;
-    
-    alert("Bookmarked course!");
+    bookmarked = new Object();
+    bookmarked.name = name;
+    bookmarked.id = id;
+    bookmarked.credits = ec;
+    bookmarked.catalog = catalog_number;
+
+    var array = JSON.parse(localStorage.getItem("bookmark"));
+    if(!array)
+    {
+      array = new Array();
+    }
+    var i = 0;
+    while (array[i] && (JSON.stringify(array[i]) != JSON.stringify(bookmarked))) 
+    {  
+      i += 1;
+    }
+    if (JSON.stringify(array[i]) != JSON.stringify(bookmarked))
+    {
+      array[i] = bookmarked;
+      localStorage.setItem("bookmark", JSON.stringify(array));
+      alert("You have bookmarked " + JSON.stringify(bookmarked.name) + "");
+    }
+    else
+    {
+      alert("Failed to bookmark to " + JSON.stringify(bookmarked.name) + ". Course already bookmarked");
+    }
   }
 </script>
 
 <script>
-  function take(name, id)
+  function take(name, id, ec, catalog_number)
   {
-    localStorage["Taking" + id + ""] =  name;
-    alert("Subscribed to course!");
+    taking = new Object();
+    taking.name = name;
+    taking.id = id;
+    taking.credits = ec;
+    taking.catalog = catalog_number;
+
+    var array = JSON.parse(localStorage.getItem("taking"));
+    if(!array)
+    {
+      array = new Array();
+    }
+    var i = 0;
+    while (array[i] && (JSON.stringify(array[i]) != JSON.stringify(taking))) 
+    {  
+      i += 1;
+    }
+    if (JSON.stringify(array[i]) != JSON.stringify(taking))
+    {
+      array[i] = taking;
+      localStorage.setItem("taking", JSON.stringify(array));
+      alert("You have subscribed to " + JSON.stringify(taking.name) + "");
+    }
+    else
+    {
+      alert("Failed to subscribe to " + JSON.stringify(taking.name) + ". Course already taken")
+    }
   }
 </script>
 
-<button onclick="bookmark('<%=@course.name%>', '<%=@course.id%>')">Bookmark!</button>
-<button onclick="take('<%=@course.name%>', '<%=@course.id%>')">Take course!</button>
+<button onclick="bookmark('<%=@course.name%>', '<%=@course.id%>', '<%=@course.ec%>', '<%=@course.catalog_number%>')">Bookmark!</button>
+<button onclick="take('<%=@course.name%>', '<%=@course.id%>', '<%=@course.ec%>', '<%=@course.catalog_number%>')">Take course!</button>
 
-<%= link_to 'Back', courses_path %>
+<div>
+  <br>
+<%= link_to 'Bookmarked courses', bookmarked_courses_path %> | <%= link_to "Courses I'm taking", taking_courses_path %> | <%= link_to 'Search courses', search_courses_path %>
+</div>

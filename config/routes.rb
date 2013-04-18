@@ -3,6 +3,7 @@ Project2::Application.routes.draw do
     collection do  
       get 'search'
       get 'bookmarked'
+      get 'taking'
     end
   end
  

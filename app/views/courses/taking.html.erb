@@ -1,0 +1,56 @@
+<head>
+<title>Subscribed courses</title>
+<script>
+	function destroy(course_id)
+	{
+		var array = JSON.parse(localStorage.getItem("taking"));
+	    var i = 0;
+	    while(JSON.stringify(array[i].id).replace(/['"]/g,'') != course_id) 
+	    {  
+	      i += 1;
+	    }
+	    var deleted_course_id = i;
+	    while(array[i])
+	    {
+	    	i += 1;
+	    }
+	    i -= 1;
+	    alert("You have deleted " + JSON.stringify(array[deleted_course_id].name) + "");
+	    array[deleted_course_id] = array[i];
+	    delete array[i];
+	    localStorage.setItem("taking", JSON.stringify(array));
+	}  
+</script>  
+</head>
+
+
+
+<h1>Courses I'm taking</h1>
+<div>
+	<script>
+		var i = 0;
+		var courses = JSON.parse(localStorage.getItem("taking"));
+		if (courses)
+		{
+			document.write("<table><tr><th>Course's name</th><th>EC</th></tr>");
+			while(courses[i])
+			{
+				document.write("<tr>");
+				document.write("<td><a href=/courses/"+ courses[i].id +">"+ courses[i].name +"</a></td><td>" + courses[i].credits + "</td>");
+				document.write("<td><button onclick=\"destroy("+ JSON.parse(courses[i].id) +")\">Delete</button></td>");
+				document.write("</tr>");
+				i += 1;
+			}
+			document.write("</table>");
+		}
+		else
+		{
+			document.write("You have not subscribed to any courses");
+		}
+		
+	</script>
+</div>
+<div>
+	<br>
+<%= link_to 'Bookmarked courses', bookmarked_courses_path %> | <%= link_to "Courses I'm taking", taking_courses_path %> | <%= link_to 'Search courses', search_courses_path %>
+</div>

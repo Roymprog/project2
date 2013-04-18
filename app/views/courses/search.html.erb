@@ -29,4 +29,7 @@
   <%= submit_tag("Search") %>
 <% end %>
 
-<%= link_to 'Back', courses_path %>
+<div>
+  <br>
+<%= link_to 'Bookmarked courses', bookmarked_courses_path %> | <%= link_to "Courses I'm taking", taking_courses_path %> | <%= link_to 'Search courses', search_courses_path %>
+</div>
