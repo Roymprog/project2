@@ -1,0 +1,24 @@
+<h1>Recently viewed courses</h1>
+<div>
+	<script>
+		var i = 0;
+		var courses = JSON.parse(localStorage.getItem("recent"));
+		if (courses)
+		{
+			document.write("<table><tr><th>Course's name</th><th>EC</th></tr>");
+			while(courses[i])
+			{
+				document.write("<tr>");
+				document.write("<td><a href=/courses/" + courses[i].id + ">"+ courses[i].name +"</a></td><td>" + courses[i].credits + "</td>");
+				document.write("</tr>");
+				i += 1;
+			}
+			document.write("</table>");
+		}
+	</script>
+</div>
+
+<div>
+	<br>
+<%= link_to 'Bookmarked courses', bookmarked_courses_path %> | <%= link_to "Courses I'm taking", taking_courses_path %> | <%= link_to 'Search courses', search_courses_path %> | <%= link_to 'Recently viewed courses', recent_courses_path %>
+</div>

@@ -4,6 +4,7 @@ Project2::Application.routes.draw do
       get 'search'
       get 'bookmarked'
       get 'taking'
+      get 'recent'
     end
   end
  

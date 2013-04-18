@@ -1,4 +1,3 @@
-<head>
 <title>Subscribed courses</title>
 <script>
 	function destroy(course_id)
@@ -19,10 +18,9 @@
 	    array[deleted_course_id] = array[i];
 	    delete array[i];
 	    localStorage.setItem("taking", JSON.stringify(array));
+	    window.location.reload(true);
 	}  
 </script>  
-</head>
-
 
 
 <h1>Courses I'm taking</h1>
@@ -52,5 +50,5 @@
 </div>
 <div>
 	<br>
-<%= link_to 'Bookmarked courses', bookmarked_courses_path %> | <%= link_to "Courses I'm taking", taking_courses_path %> | <%= link_to 'Search courses', search_courses_path %>
+		<%= link_to 'Bookmarked courses', bookmarked_courses_path %> | <%= link_to "Courses I'm taking", taking_courses_path %> | <%= link_to 'Search courses', search_courses_path %> | <%= link_to 'Recently viewed courses', recent_courses_path %>
 </div>

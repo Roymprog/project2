@@ -46,6 +46,45 @@
 </p>
 
 <script>
+
+  var array = JSON.parse(localStorage.getItem("recent"));
+  if(!array)
+  {
+    array = new Array();
+  }
+  var i = 0;
+  while (array[i] && i < 9)
+  {
+    i += 1;
+  }
+  if (i == 9)
+  {
+    tmp = new Object();
+    tmp2 = new Object();
+    for (var j = 0; j < 9; j++)
+    {
+      tmp2 = array[j];
+      array[j] = tmp;
+      tmp = tmp2;
+    }
+    array[0].name     =   "<%=@course.name%>";
+    array[0].id       =   <%=@course.id%>;
+    array[0].credits  =   <%=@course.ec%>;
+    array[0].catalog  =   "<%=@course.catalog_number%>";
+  }
+  else 
+  {
+    recent = new Object();
+    recent.name = "<%=@course.name%>";
+    recent.id =  <%=@course.id%>;
+    recent.credits = <%=@course.ec%>;
+    recent.catalog = "<%=@course.catalog_number%>";
+    array[i] = recent;
+  }
+  localStorage.setItem("recent", JSON.stringify(array));
+</script>
+
+<script>
   function bookmark(name, id, ec, catalog_number)
   { 
     bookmarked = new Object();
@@ -114,5 +153,5 @@
 
 <div>
   <br>
-<%= link_to 'Bookmarked courses', bookmarked_courses_path %> | <%= link_to "Courses I'm taking", taking_courses_path %> | <%= link_to 'Search courses', search_courses_path %>
+<%= link_to 'Bookmarked courses', bookmarked_courses_path %> | <%= link_to "Courses I'm taking", taking_courses_path %> | <%= link_to 'Search courses', search_courses_path %> | <%= link_to 'Recently viewed courses', recent_courses_path %>
 </div>
