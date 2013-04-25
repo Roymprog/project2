@@ -1,24 +1,84 @@
-<h1>Recently viewed courses</h1>
-<div>
+<% if !@courses %>
 	<script>
-		var i = 0;
-		var courses = JSON.parse(localStorage.getItem("recent"));
-		if (courses)
-		{
-			document.write("<table><tr><th>Course's name</th><th>EC</th></tr>");
-			while(courses[i])
-			{
-				document.write("<tr>");
-				document.write("<td><a href=/courses/" + courses[i].id + ">"+ courses[i].name +"</a></td><td>" + courses[i].credits + "</td>");
-				document.write("</tr>");
-				i += 1;
-			}
-			document.write("</table>");
-		}
+		$(document).on('pageshow', function(event){
+			$('#recent_courses').val(localStorage.getItem("recent"));
+		});
+		jQuery(document).ready(function($) {
+		$("#recent_courses").submit();
+		}); 
 	</script>
-</div>
+<% end %>
 
-<div>
+<div data-role="page" data-fullscreen="true" data-position= "fixed">
+	
+	<div data-role="header">
+	<h1>Recent</h1>
 	<br>
-<%= link_to 'Bookmarked courses', bookmarked_courses_path %> | <%= link_to "Courses I'm taking", taking_courses_path %> | <%= link_to 'Search courses', search_courses_path %> | <%= link_to 'Recently viewed courses', recent_courses_path %>
+	</div>
+
+	<div data-role="content" id="#page">
+		<% if @courses %>
+			<table>
+			  <tr>
+			    <th>Course's name</th>
+			    <th>Ec</th>
+			    <th></th>
+			  </tr>
+
+			<% @courses.each do |course| %>
+			  <tr>
+			    <td><%= link_to course['name'], course %></td>
+			    <td><%= course['credits'] %></td>
+			  </tr>
+			<% end %>
+			</table>
+		<% end %>
+		<br>
+	</div>
+
+	<div data-role ="footer"id="#footer" data-position="fixed">
+
+		<button onclick="submit_bookmark_form()">Bookmarked courses</button> | <button onclick="submit_taking_form()">Taking courses</button> | <button onclick="submit_recent_form()">Recent courses</button> | <%= link_to 'Search courses', search_courses_path %>
+	
+		<form accept-charset="UTF-8" action="/courses/bookmarked" method="post">
+		  <div style="margin:0;padding:0">
+		    <input id ="bookmarked_courses" name="bookmarked_courses" type="hidden"/>
+		  </div>
+		</form>
+		<script>
+			function submit_bookmark_form(){
+				$('#bookmarked_courses').val(localStorage.getItem("bookmark"));
+				$("#bookmarked_courses").submit();
+			}
+		</script>
+
+		
+		
+		<form accept-charset="UTF-8" action="/courses/taking" method="post">
+		  <div style="margin:0;padding:0">
+		    <input id ="taking_courses" name="taking_courses" type="hidden"/>
+		  </div>
+		</form>
+		<script>
+			function submit_taking_form(){
+				$('#taking_courses').val(localStorage.getItem("taking"));
+				$("#taking_courses").submit();
+			}
+		</script>
+
+		
+		
+
+		<form accept-charset="UTF-8" action="/courses/recent" method="post">
+		  <div style="margin:0;padding:0">
+		    <input id ="recent_courses" name="recent_courses" type="hidden"/>
+		  </div>
+		</form>
+		<script>
+			function submit_recent_form(){
+				$('#recent_courses').val(localStorage.getItem("recent"));
+				$("#recent_courses").submit();
+			}
+		</script>
+	</div>
 </div>

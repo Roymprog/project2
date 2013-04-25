@@ -18,11 +18,9 @@ ActiveRecord::Schema.define(:version => 20130410111257) do
     t.string   "institute"
     t.string   "catalog_number"
     t.integer  "ec"
-    t.string   "staff"
     t.string   "maximum"
     t.string   "period"
     t.string   "blok"
-    t.string   "programme"
     t.text     "description"
     t.datetime "created_at",     :null => false
     t.datetime "updated_at",     :null => false

@@ -1,15 +1,77 @@
-<h1>Search results</h1>
+<div data-role="page">
+	<div data-role="header">
+		<h1>Results</h1>
+	</div>
 
-<table>
-  <tr>
-    <th>Course's name</th>
-    <th>Catalog number</th>
-  </tr>
+	<% if (@results.name == "@results") %>
+	<div data-role="content">
+		<table>
+	  	<tr>
+	    	<th>Course's name</th>
+	    	<th>Catalog number</th>
+	  	</tr>
 
-<% @results.each do |result| %>
-  <tr>
-	<td><%= result.name %></td>
-	<td><%= result.catalog_number %></td>
-  </tr>
-<%end%>
-<br>
+		<% @results.limit(10).each do |result| %>
+		  	<tr>
+				<td><%= link_to result.name, result %></td>
+				<td><%= result.catalog_number %></td>
+			</tr>
+		<% end %>
+		</table>
+		<br>
+		<button onclick=> Next 10</button>
+	</div>
+	<% else %>
+	<div>
+		Sorry, could not find any courses for the given specifications
+		<br>
+		<%= link_to 'Search again', search_courses_path %>
+	</div>
+	<% end %>
+
+	<div data-role ="footer"id="#footer">
+
+		<button onclick="submit_bookmark_form()">Bookmarked courses</button> | <button onclick="submit_taking_form()">Taking courses</button> | <button onclick="submit_recent_form()">Recent courses</button> | <%= link_to 'Search courses', search_courses_path %>
+	
+		<form accept-charset="UTF-8" action="/courses/bookmarked" method="post">
+		  <div style="margin:0;padding:0">
+		    <input id ="bookmarked_courses" name="bookmarked_courses" type="hidden"/>
+		  </div>
+		</form>
+		<script>
+			function submit_bookmark_form(){
+				$('#bookmarked_courses').val(localStorage.getItem("bookmark"));
+				$("#bookmarked_courses").submit();
+			}
+		</script>
+
+		
+		
+		<form accept-charset="UTF-8" action="/courses/taking" method="post">
+		  <div style="margin:0;padding:0">
+		    <input id ="taking_courses" name="taking_courses" type="hidden"/>
+		  </div>
+		</form>
+		<script>
+			function submit_taking_form(){
+				$('#taking_courses').val(localStorage.getItem("taking"));
+				$("#taking_courses").submit();
+			}
+		</script>
+
+		
+		
+
+		<form accept-charset="UTF-8" action="/courses/recent" method="post">
+		  <div style="margin:0;padding:0">
+		    <input id ="recent_courses" name="recent_courses" type="hidden"/>
+		  </div>
+		</form>
+		<script>
+			function submit_recent_form(){
+				$('#recent_courses').val(localStorage.getItem("recent"));
+				$("#recent_courses").submit();
+			}
+		</script>
+	</div>
+</div>

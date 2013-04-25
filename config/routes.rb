@@ -3,15 +3,20 @@ Project2::Application.routes.draw do
     collection do  
       get 'search'
       get 'bookmarked'
+      post 'bookmarked'
       get 'taking'
+      post 'taking'
       get 'recent'
+      post 'recent'
+      get "result"
     end
   end
- 
+  
   match '/search(.:n)(.:i)(.:c)(.:ec)(.:m)(.:p)(.:b)(.:s)(.:d)' => 'courses#result'
-
+  
   get "courses/index"
   
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -61,7 +66,7 @@ Project2::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-   root :to => 'courses#index'
+   root :to => 'courses#search'
 
   # See how all your routes lay out with "rake routes"
 

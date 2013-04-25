@@ -1,35 +1,86 @@
-<h1>Search courses</h1>
+<div data-role="page">
+  <div data-role="header">
+    <h1>Search</h1>
+  </div>
 
-<%= form_tag("/search", :method => "get") do %>
-  <%= label_tag(:n, "Name:") %>
-  <%= text_field_tag(:n) %>
-  <br>
-  <%= label_tag(:i, "Institute:") %>
-  <%= text_field_tag(:i) %>
-  <br>
-  <%= label_tag(:c, "Catalog number:") %>
-  <%= text_field_tag(:c) %>
-   <br>
-  <%= label_tag(:ec, "Credits (EC):") %>
-  <%= text_field_tag(:ec) %>
-  <br>
-  <%= label_tag(:m, "Maximum participants (Max.):") %>
-  <%= text_field_tag(:m) %>
-  <br>
-  <%= label_tag(:p, "Semester:") %>
-  <%= select_tag(:p, options_for_select([['1', "1"], ['2',"2"]])) %>
-  <%= label_tag(:b, "Blok:") %>
-  <%= select_tag(:b, options_for_select([['any', ""],['1', "1"], ['2', "2"],  ['3', "3"], ['1 en 2', "1 en 2"], ['2 en 3', "2 en 3"]])) %>
-  <br>
-  <%= label_tag(:s, "Staff:") %>
-  <%= text_field_tag(:s) %>
-  <br>
-  <%= label_tag(:d, "Description:") %>
-  <%= text_field_tag(:d) %>
-  <%= submit_tag("Search") %>
-<% end %>
+  <div data-role="content">
+    <%= form_tag("/search", :method => "get") do %>
+      <%= label_tag(:n, "Name:") %>
+      <%= text_field_tag(:n) %>
+      <br>
+      <%= label_tag(:i, "Institute:") %>
+      <%= text_field_tag(:i) %>
+      <br>
+      <%= label_tag(:c, "Catalog number:") %>
+      <%= text_field_tag(:c) %>
+      <br>
+      <%= label_tag(:ec, "Credits (EC):") %>
+      <%= text_field_tag(:ec) %>
+      <br>
+      <%= label_tag(:m, "Maximum participants (Max.):") %>
+      <%= text_field_tag(:m) %>
+      <br>
+      <%= label_tag(:p, "Semester:") %>
+      <%= select_tag(:p, options_for_select([['any', ""], ['1', "1"], ['2',"2"]])) %>
+      <br>
+      <%= label_tag(:b1, "Blok:") %>
+      <%= select_tag(:b1, options_for_select([['any', ""],['1', "1"], ['2', "2"],  ['3', "3"]])) %>
+      <%= label_tag(:b2, "and(optional):") %>
+      <%= select_tag(:b2, options_for_select([['none', ""],['1', "1"], ['2', "2"],  ['3', "3"]])) %>
+      <br>
+      <%= label_tag(:s, "Staff:") %>
+      <%= text_field_tag(:s) %>
+      <br>
+      <%= label_tag(:d, "Description:") %>
+      <%= text_field_tag(:d) %>
+      <%= submit_tag("Search") %>
+    <% end %>
+    <br>
+  </div>
+    <div data-role ="footer"id="#footer">
 
-<div>
-  <br>
-<%= link_to 'Bookmarked courses', bookmarked_courses_path %> | <%= link_to "Courses I'm taking", taking_courses_path %> | <%= link_to 'Search courses', search_courses_path %> | <%= link_to 'Recently viewed courses', recent_courses_path %>
+        <button onclick="submit_bookmark_form()">Bookmarked courses</button> | <button onclick="submit_taking_form()">Taking courses</button> | <button onclick="submit_recent_form()">Recent courses</button> | <%= link_to 'Search courses', search_courses_path %>
+      
+        <form accept-charset="UTF-8" action="/courses/bookmarked" method="post">
+          <div style="margin:0;padding:0">
+            <input id ="bookmarked_courses" name="bookmarked_courses" type="hidden"/>
+          </div>
+        </form>
+        <script>
+          function submit_bookmark_form(){
+            $('#bookmarked_courses').val(localStorage.getItem("bookmark"));
+            $("#bookmarked_courses").submit();
+          }
+        </script>
+
+        
+        
+        <form accept-charset="UTF-8" action="/courses/taking" method="post">
+          <div style="margin:0;padding:0">
+            <input id ="taking_courses" name="taking_courses" type="hidden"/>
+          </div>
+        </form>
+        <script>
+          function submit_taking_form(){
+            $('#taking_courses').val(localStorage.getItem("taking"));
+            $("#taking_courses").submit();
+          }
+        </script>
+
+        
+        
+
+        <form accept-charset="UTF-8" action="/courses/recent" method="post">
+          <div style="margin:0;padding:0">
+            <input id ="recent_courses" name="recent_courses" type="hidden"/>
+          </div>
+        </form>
+        <script>
+          function submit_recent_form(){
+            $('#recent_courses').val(localStorage.getItem("recent"));
+            $("#recent_courses").submit();
+          }
+        </script>
+      </div>
+  </div>
 </div>

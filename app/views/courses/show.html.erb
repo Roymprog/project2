@@ -1,62 +1,124 @@
-<p id="notice"><%= notice %></p>
+<div data-role="page">
+  <div>
+    <h1>Show course</h1>
+  </div>
+  <div data-role ="content" id="#page">
+    <p id="notice"><%= notice %></p>
 
-<p>
-  <b>Name:</b>
-  <%= @course.name %>
-</p>
+    <p>
+      <b>Name:</b>
+      <%= @course.name %>
+    </p>
 
-<p>
-  <b>Institute:</b>
-  <%= @course.institute %>
-</p>
+    <p>
+      <b>Institute:</b>
+      <%= @course.institute %>
+    </p>
 
-<p>
-  <b>Catalog number:</b>
-  <%= @course.catalog_number %>
-</p>
+    <p>
+      <b>Catalog number:</b>
+      <%= @course.catalog_number %>
+    </p>
 
-<p>
-  <b>Ec:</b>
-  <%= @course.ec %>
-</p>
+    <p>
+      <b>Ec:</b>
+      <%= @course.ec %>
+    </p>
 
-<p>
-  <b>Staff:</b>
-  <%= @course.staff %>
-</p>
+    <p>
+      <b>Staff:</b>
+      
+      <% @staff_names_urls.each do |name_url| %>
+      <%= link_to name_url[0], name_url[1] %>
+      <% end %>
+    </p>
 
-<p>
-  <b>Maximum:</b>
-  <%= @course.maximum %>
-</p>
+    <p>
+      <b>Maximum amount of participants:</b>
+      <%= @course.maximum %>
+    </p>
 
-<p>
-  <b>Blok:</b>
-  <%= @course.blok %>
-</p>
+    <p>
+      <b>Blok:</b>
+      <%= @course.period %>
+    </p>
 
-<p>
-  <b>Programme:</b>
-  <%= @course.programme %>
-</p>
+    <p>
+      <b>Programme:</b>
+      
+      <% @programme_names_urls.each do |name_url| %>
+         <%= link_to name_url[0], name_url[1] %>
+      <% end %>
+    </p>
 
-<p>
-  <b>Description:</b>
-  <%= @course.description %>
-</p>
+    <p>
+      <b>Description:</b>
+      <%= @course.description %>
+    </p>
+  </div>
+
+  <div data-role ="footer" id="#footer" data-position="fixed">
+
+      <button onclick="submit_bookmark_form()">Bookmarked courses</button> | <button onclick="submit_taking_form()">Taking courses</button> | <button onclick="submit_recent_form()">Recent courses</button> | <%= link_to 'Search courses', search_courses_path %>
+    
+      <form accept-charset="UTF-8" action="/courses/bookmarked" method="post">
+        <div style="margin:0;padding:0">
+          <input id ="bookmarked_courses" name="bookmarked_courses" type="hidden"/>
+        </div>
+      </form>
+      <script>
+        function submit_bookmark_form(){
+          $('#bookmarked_courses').val(localStorage.getItem("bookmark"));
+          $("#bookmarked_courses").submit();
+        }
+      </script>
+
+      
+      
+      <form accept-charset="UTF-8" action="/courses/taking" method="post">
+        <div style="margin:0;padding:0">
+          <input id ="taking_courses" name="taking_courses" type="hidden"/>
+        </div>
+      </form>
+      <script>
+        function submit_taking_form(){
+          $('#taking_courses').val(localStorage.getItem("taking"));
+          $("#taking_courses").submit();
+        }
+      </script>
+
+      
+      
+
+      <form accept-charset="UTF-8" action="/courses/recent" method="post">
+        <div style="margin:0;padding:0">
+          <input id ="recent_courses" name="recent_courses" type="hidden"/>
+        </div>
+      </form>
+      <script>
+        function submit_recent_form(){
+          $('#recent_courses').val(localStorage.getItem("recent"));
+          $("#recent_courses").submit();
+        }
+      </script>
+  </div>
+</div>
 
 <script>
-
+// checks for data in local storage
   var array = JSON.parse(localStorage.getItem("recent"));
   if(!array)
   {
     array = new Array();
   }
   var i = 0;
+ // checks array for empty spot  
   while (array[i] && i < 9)
   {
     i += 1;
   }
+  // size 9 means full so all objects shuffle one place up
+  // last course in array will be deleted
   if (i == 9)
   {
     tmp = new Object();
@@ -72,6 +134,7 @@
     array[0].credits  =   <%=@course.ec%>;
     array[0].catalog  =   "<%=@course.catalog_number%>";
   }
+  // if array is not full yet new course is put at empty spot
   else 
   {
     recent = new Object();
@@ -81,6 +144,7 @@
     recent.catalog = "<%=@course.catalog_number%>";
     array[i] = recent;
   }
+  // sets new data in local storage
   localStorage.setItem("recent", JSON.stringify(array));
 </script>
 
@@ -148,10 +212,48 @@
   }
 </script>
 
-<button onclick="bookmark('<%=@course.name%>', '<%=@course.id%>', '<%=@course.ec%>', '<%=@course.catalog_number%>')">Bookmark!</button>
-<button onclick="take('<%=@course.name%>', '<%=@course.id%>', '<%=@course.ec%>', '<%=@course.catalog_number%>')">Take course!</button>
+<div data-role ="footer"id="#footer">
 
-<div>
-  <br>
-<%= link_to 'Bookmarked courses', bookmarked_courses_path %> | <%= link_to "Courses I'm taking", taking_courses_path %> | <%= link_to 'Search courses', search_courses_path %> | <%= link_to 'Recently viewed courses', recent_courses_path %>
-</div>
+    <button onclick="submit_bookmark_form()">Bookmarked courses</button> | <button onclick="submit_taking_form()">Taking courses</button> | <button onclick="submit_recent_form()">Recent courses</button> | <%= link_to 'Search courses', search_courses_path %>
+  
+    <form accept-charset="UTF-8" action="/courses/bookmarked" method="post">
+      <div style="margin:0;padding:0">
+        <input id ="bookmarked_courses" name="bookmarked_courses" type="hidden"/>
+      </div>
+    </form>
+    <script>
+      function submit_bookmark_form(){
+        $('#bookmarked_courses').val(localStorage.getItem("bookmark"));
+        $("#bookmarked_courses").submit();
+      }
+    </script>
+
+    
+    
+    <form accept-charset="UTF-8" action="/courses/taking" method="post">
+      <div style="margin:0;padding:0">
+        <input id ="taking_courses" name="taking_courses" type="hidden"/>
+      </div>
+    </form>
+    <script>
+      function submit_taking_form(){
+        $('#taking_courses').val(localStorage.getItem("taking"));
+        $("#taking_courses").submit();
+      }
+    </script>
+
+    
+    
+
+    <form accept-charset="UTF-8" action="/courses/recent" method="post">
+      <div style="margin:0;padding:0">
+        <input id ="recent_courses" name="recent_courses" type="hidden"/>
+      </div>
+    </form>
+    <script>
+      function submit_recent_form(){
+        $('#recent_courses').val(localStorage.getItem("recent"));
+        $("#recent_courses").submit();
+      }
+    </script>
+  </div>

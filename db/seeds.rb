@@ -7,7 +7,7 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 
-f = File.open("courses.xml")
+f = File.open("course.xml")
 @doc = Nokogiri::XML(f)
 @doc.xpath("/courses/course").each do |course|
 	
@@ -17,27 +17,17 @@ f = File.open("courses.xml")
 					  :period => course.xpath("period").text.strip.downcase,
 					  :blok => course.xpath("period").text.strip.gsub(/Semester 1/, '').gsub(/Semester 2/, '').gsub(/[c]/, '').gsub(/and/, 'en').downcase,
 					  :institute => course.xpath("institute").text.strip,
-					  :description => course.xpath("description").text.strip,
-					  :maximum => course.xpath("participant_count").text.strip)
+					  :description => course.xpath("description").text.strip.gsub(/<.>/,'').gsub(/<\/.>/, '').gsub(/<..\/>/, ''),
+					  :maximum => course.xpath("participant_count").text.strip.gsub(/<.>/,'').gsub(/<\/.>/, ''))
 	course.xpath("staff_list/staff").each do |staff|
-	c.staffs << Staff.create(:name => staff.xpath("name").text.strip,
+	c.staffs << Staff.find_or_create_by_name_and_url(:name => staff.xpath("name").text.strip,
 				         	 :url => staff.xpath("url").text.strip)
 	end
 	course.xpath("programmes/programme").each do |programme|
-	c.programmes << Programme.create(:name => course.xpath("name").text.strip,
-					         		 :url => course.xpath("url").text.strip)
+	c.programmes << Programme.find_or_create_by_name_and_url(:name => programme.xpath("name").text.strip,
+					         		 :url => programme.xpath("url").text.strip)
 	end
 	
 end
 	
-#@doc.xpath("/courses/course/institute").each do |filldb|
-#	Course.create(:institute => filldb.text)
-#end
-
-#i = 1
-#xml = @doc.xpath("/courses/course").each do |filldb|
-#	xml.xpath("@sgid")
-#	Course.update(i, :catalog_number => filldb.text)
-#	i = i + 1
-#end
 f.close

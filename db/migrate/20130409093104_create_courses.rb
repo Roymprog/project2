@@ -5,11 +5,9 @@ class CreateCourses < ActiveRecord::Migration
       t.string :institute
       t.string :catalog_number
       t.integer :ec
-      t.string :staff
       t.string :maximum
       t.string :period
       t.string :blok
-      t.string :programme
       t.text :description
 
       t.timestamps
