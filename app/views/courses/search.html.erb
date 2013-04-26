@@ -46,41 +46,18 @@
             <input id ="bookmarked_courses" name="bookmarked_courses" type="hidden"/>
           </div>
         </form>
-        <script>
-          function submit_bookmark_form(){
-            $('#bookmarked_courses').val(localStorage.getItem("bookmark"));
-            $("#bookmarked_courses").submit();
-          }
-        </script>
-
-        
-        
+               
         <form accept-charset="UTF-8" action="/courses/taking" method="post">
           <div style="margin:0;padding:0">
             <input id ="taking_courses" name="taking_courses" type="hidden"/>
           </div>
         </form>
-        <script>
-          function submit_taking_form(){
-            $('#taking_courses').val(localStorage.getItem("taking"));
-            $("#taking_courses").submit();
-          }
-        </script>
-
-        
-        
-
+       
         <form accept-charset="UTF-8" action="/courses/recent" method="post">
           <div style="margin:0;padding:0">
             <input id ="recent_courses" name="recent_courses" type="hidden"/>
           </div>
         </form>
-        <script>
-          function submit_recent_form(){
-            $('#recent_courses').val(localStorage.getItem("recent"));
-            $("#recent_courses").submit();
-          }
-        </script>
       </div>
   </div>
 </div>

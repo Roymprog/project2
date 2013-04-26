@@ -7,7 +7,7 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 
-f = File.open("course.xml")
+f = File.open("courses.xml")
 @doc = Nokogiri::XML(f)
 @doc.xpath("/courses/course").each do |course|
 	

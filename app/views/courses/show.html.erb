@@ -55,6 +55,7 @@
       <b>Description:</b>
       <%= @course.description %>
     </p>
+    <button onclick="take('<%=@course.name%>',<%=@course.ec %>, <%=@course.id %>)">Take</button> <button onclick="bookmark('<%=@course.name%>',<%=@course.ec %>, <%=@course.id %>)">Bookmark</button>
   </div>
 
   <div data-role ="footer" id="#footer" data-position="fixed">
@@ -66,53 +67,52 @@
           <input id ="bookmarked_courses" name="bookmarked_courses" type="hidden"/>
         </div>
       </form>
-      <script>
-        function submit_bookmark_form(){
-          $('#bookmarked_courses').val(localStorage.getItem("bookmark"));
-          $("#bookmarked_courses").submit();
-        }
-      </script>
-
-      
-      
+           
       <form accept-charset="UTF-8" action="/courses/taking" method="post">
         <div style="margin:0;padding:0">
           <input id ="taking_courses" name="taking_courses" type="hidden"/>
         </div>
       </form>
-      <script>
-        function submit_taking_form(){
-          $('#taking_courses').val(localStorage.getItem("taking"));
-          $("#taking_courses").submit();
-        }
-      </script>
-
       
-      
-
       <form accept-charset="UTF-8" action="/courses/recent" method="post">
         <div style="margin:0;padding:0">
           <input id ="recent_courses" name="recent_courses" type="hidden"/>
         </div>
       </form>
-      <script>
-        function submit_recent_form(){
-          $('#recent_courses').val(localStorage.getItem("recent"));
-          $("#recent_courses").submit();
-        }
-      </script>
-  </div>
+   </div>
 </div>
 
-<script>
-// checks for data in local storage
+<div data-role ="footer"id="#footer">
+
+    <button onclick="submit_bookmark_form()">Bookmarked courses</button> | <button onclick="submit_taking_form()">Taking courses</button> | <button onclick="submit_recent_form()">Recent courses</button> | <%= link_to 'Search courses', search_courses_path %>
+  
+    <form accept-charset="UTF-8" action="/courses/bookmarked" method="post">
+      <div style="margin:0;padding:0">
+        <input id ="bookmarked_courses" name="bookmarked_courses" type="hidden"/>
+      </div>
+    </form>
+        
+    <form accept-charset="UTF-8" action="/courses/taking" method="post">
+      <div style="margin:0;padding:0">
+        <input id ="taking_courses" name="taking_courses" type="hidden"/>
+      </div>
+    </form>
+    
+    <form accept-charset="UTF-8" action="/courses/recent" method="post">
+      <div style="margin:0;padding:0">
+        <input id ="recent_courses" name="recent_courses" type="hidden"/>
+      </div>
+    </form>
+  </div>
+  <script>
+    // checks for data in local storage
   var array = JSON.parse(localStorage.getItem("recent"));
   if(!array)
   {
     array = new Array();
   }
   var i = 0;
- // checks array for empty spot  
+  // checks array for empty spot  
   while (array[i] && i < 9)
   {
     i += 1;
@@ -130,130 +130,18 @@
       tmp = tmp2;
     }
     array[0].name     =   "<%=@course.name%>";
-    array[0].id       =   <%=@course.id%>;
     array[0].credits  =   <%=@course.ec%>;
-    array[0].catalog  =   "<%=@course.catalog_number%>";
+    array[0].id       =   <%=@course.id%>; 
   }
   // if array is not full yet new course is put at empty spot
   else 
   {
-    recent = new Object();
-    recent.name = "<%=@course.name%>";
-    recent.id =  <%=@course.id%>;
+    recent         = new Object();
+    recent.name    = "<%=@course.name%>";
     recent.credits = <%=@course.ec%>;
-    recent.catalog = "<%=@course.catalog_number%>";
-    array[i] = recent;
+    recent.id      = <%=@course.id%>;
+    array[i]       = recent;
   }
   // sets new data in local storage
   localStorage.setItem("recent", JSON.stringify(array));
 </script>
-
-<script>
-  function bookmark(name, id, ec, catalog_number)
-  { 
-    bookmarked = new Object();
-    bookmarked.name = name;
-    bookmarked.id = id;
-    bookmarked.credits = ec;
-    bookmarked.catalog = catalog_number;
-
-    var array = JSON.parse(localStorage.getItem("bookmark"));
-    if(!array)
-    {
-      array = new Array();
-    }
-    var i = 0;
-    while (array[i] && (JSON.stringify(array[i]) != JSON.stringify(bookmarked))) 
-    {  
-      i += 1;
-    }
-    if (JSON.stringify(array[i]) != JSON.stringify(bookmarked))
-    {
-      array[i] = bookmarked;
-      localStorage.setItem("bookmark", JSON.stringify(array));
-      alert("You have bookmarked " + JSON.stringify(bookmarked.name) + "");
-    }
-    else
-    {
-      alert("Failed to bookmark to " + JSON.stringify(bookmarked.name) + ". Course already bookmarked");
-    }
-  }
-</script>
-
-<script>
-  function take(name, id, ec, catalog_number)
-  {
-    taking = new Object();
-    taking.name = name;
-    taking.id = id;
-    taking.credits = ec;
-    taking.catalog = catalog_number;
-
-    var array = JSON.parse(localStorage.getItem("taking"));
-    if(!array)
-    {
-      array = new Array();
-    }
-    var i = 0;
-    while (array[i] && (JSON.stringify(array[i]) != JSON.stringify(taking))) 
-    {  
-      i += 1;
-    }
-    if (JSON.stringify(array[i]) != JSON.stringify(taking))
-    {
-      array[i] = taking;
-      localStorage.setItem("taking", JSON.stringify(array));
-      alert("You have subscribed to " + JSON.stringify(taking.name) + "");
-    }
-    else
-    {
-      alert("Failed to subscribe to " + JSON.stringify(taking.name) + ". Course already taken")
-    }
-  }
-</script>
-
-<div data-role ="footer"id="#footer">
-
-    <button onclick="submit_bookmark_form()">Bookmarked courses</button> | <button onclick="submit_taking_form()">Taking courses</button> | <button onclick="submit_recent_form()">Recent courses</button> | <%= link_to 'Search courses', search_courses_path %>
-  
-    <form accept-charset="UTF-8" action="/courses/bookmarked" method="post">
-      <div style="margin:0;padding:0">
-        <input id ="bookmarked_courses" name="bookmarked_courses" type="hidden"/>
-      </div>
-    </form>
-    <script>
-      function submit_bookmark_form(){
-        $('#bookmarked_courses').val(localStorage.getItem("bookmark"));
-        $("#bookmarked_courses").submit();
-      }
-    </script>
-
-    
-    
-    <form accept-charset="UTF-8" action="/courses/taking" method="post">
-      <div style="margin:0;padding:0">
-        <input id ="taking_courses" name="taking_courses" type="hidden"/>
-      </div>
-    </form>
-    <script>
-      function submit_taking_form(){
-        $('#taking_courses').val(localStorage.getItem("taking"));
-        $("#taking_courses").submit();
-      }
-    </script>
-
-    
-    
-
-    <form accept-charset="UTF-8" action="/courses/recent" method="post">
-      <div style="margin:0;padding:0">
-        <input id ="recent_courses" name="recent_courses" type="hidden"/>
-      </div>
-    </form>
-    <script>
-      function submit_recent_form(){
-        $('#recent_courses').val(localStorage.getItem("recent"));
-        $("#recent_courses").submit();
-      }
-    </script>
-  </div>

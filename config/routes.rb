@@ -8,12 +8,11 @@ Project2::Application.routes.draw do
       post 'taking'
       get 'recent'
       post 'recent'
-      get "result"
     end
   end
   
-  match '/search(.:n)(.:i)(.:c)(.:ec)(.:m)(.:p)(.:b)(.:s)(.:d)' => 'courses#result'
-  
+  match '/search(.:any)' => 'courses#result'
+  match '/courses/bookmarked(.any)' => 'courses#show'
   get "courses/index"
   
 

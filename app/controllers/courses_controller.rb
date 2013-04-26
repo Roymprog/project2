@@ -30,7 +30,7 @@ class CoursesController < ApplicationController
   end
 
   def bookmarked
-    if params[:bookmarked_courses]
+    if !params[:bookmarked_courses].blank?
       @courses = ActiveSupport::JSON.decode(params[:bookmarked_courses])
     end  
       respond_to do |format|
@@ -40,8 +40,8 @@ class CoursesController < ApplicationController
   end
 
   def taking
-    if params[:taking_courses]
-    @courses = ActiveSupport::JSON.decode(params[:taking_courses])
+    if !params[:taking_courses].blank?
+      @courses = ActiveSupport::JSON.decode(params[:taking_courses])
     end
       respond_to do |format|
         format.html 
@@ -50,7 +50,7 @@ class CoursesController < ApplicationController
   end
 
   def recent
-    if params[:recent_courses]
+    if !params[:recent_courses].blank?
       @courses = ActiveSupport::JSON.decode(params[:recent_courses])
     end
 
@@ -63,11 +63,11 @@ class CoursesController < ApplicationController
   def result
   # checks for all parameters if it exists and searches courses for that parameter
   # adds up parameters if multiple are given
-    if (params[:n] != "")
+    if !params[:n].blank?
       @results = Course.where("name like '%" + params[:n] + "%'")
     end
 
-    if (params[:i] != "")
+    if !params[:i].blank?
       if @results
         @results = @results.where("institute like '%" + params[:i] + "%'")
       else
@@ -75,7 +75,7 @@ class CoursesController < ApplicationController
       end
     end
 
-    if (params[:c] != "")
+    if !params[:c].blank?
       if @results
         @results = @results.where("catalog_number like '%" + params[:c] + "%'")
       else
@@ -83,7 +83,7 @@ class CoursesController < ApplicationController
       end
     end
 
-    if (params[:ec] != "")
+    if !params[:ec].blank?
       if @results
         @results = @results.where("ec like '%" + params[:ec] + "%'")
       else
@@ -91,7 +91,7 @@ class CoursesController < ApplicationController
       end
     end
 
-    if (params[:m] != "")
+    if !params[:m].blank?
       if @results
         @results = @results.where("maximum like '%" + params[:m] + "%'")
       else
@@ -99,7 +99,7 @@ class CoursesController < ApplicationController
       end
     end
 
-    if (params[:p] != "")
+    if !params[:p].blank?
       if @results
         @results = @results.where("period like '%" + params[:p] + "%'")
       else
@@ -107,7 +107,7 @@ class CoursesController < ApplicationController
       end
     end
 
-    if (params[:b1] != "")
+    if !params[:b1].blank?
       if @results
         @results = @results.where("blok like '%" + params[:b1] + "%'")
       else
@@ -115,7 +115,7 @@ class CoursesController < ApplicationController
       end
     end
 
-    if (params[:b2] != "")
+    if !params[:b2].blank?
       if @results
         @results = @results.where("blok like '%" + params[:b2] + "%'")
       else
@@ -123,7 +123,7 @@ class CoursesController < ApplicationController
       end
     end
 
-    if (params[:s] != "")
+    if !params[:s].blank?
       ids = Staff.where("name like '%" + params[:s] + "%'").map(&:courses).flatten(1).map(&:id)
       if @results
         @results = @results.where("id in (?)", ids)
@@ -132,8 +132,9 @@ class CoursesController < ApplicationController
       end
     end
 
-  @results = Post.where(:published => true).paginate(:page => params[:page]).order('id ASC')
-
+    if (@results)
+      @results = @results.paginate(:page => params[:page], :per_page => 10)
+    end
     # @results = Course.where("name like '%" + params[:n] + "%' AND 
     #                         institute like '%" + params[:i] + "%' AND
     #                         catalog_number like '%" + params[:c].upcase + "%' AND

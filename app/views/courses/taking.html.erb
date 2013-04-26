@@ -9,29 +9,6 @@
 	</script>
 <% end %>
 
-<script>
-	function destroy(course_id)
-	{
-		var array = JSON.parse(localStorage.getItem("taking"));
-	    var i = 0;
-	    while(JSON.stringify(array[i].id).replace(/['"]/g,'') != course_id) 
-	    {  
-	      i += 1;
-	    }
-	    var deleted_course_id = i;
-	    while(array[i])
-	    {
-	    	i += 1;
-	    }
-	    i -= 1;
-	    alert("You have deleted " + JSON.stringify(array[deleted_course_id].name) + "");
-	    array[deleted_course_id] = array[i];
-	    array.pop(i);
-	    localStorage.setItem("taking", JSON.stringify(array));
-	window.location.reload();
-	}  
-</script>
-
 <div data-role="page" >
 	<div data-role="header">	
 		<h1>Taking</h1>
@@ -39,7 +16,7 @@
 	</div>
 
 	<div data-role="content" id="#page">
-	<% if @courses %>
+	<% if !@courses.nil? %>
 			<table>
 		  <tr>
 		    <th>Course's name</th>
@@ -49,12 +26,17 @@
 
 		<% @courses.each do |course| %>
 		  <tr>
-		    <td><%= link_to course['name'], course %></td>
+		    <td><a href="/courses/<%= course['id']%>"> <%=course['name']%></a></td>
 		    <td><%= course['credits'] %></td>
-		    <td><button onclick="destroy(<%=course['id'] %>)">Delete</button></td>
+		    <td><button onclick="destroy_taking(<%=course['id'] %>)">Delete</button></td>
 		  </tr>
 		<% end %>
 	</table>
+	<% else %>
+		<div>
+			You have not subscribed to any courses
+			<br>
+		</div>
 	<% end %>
 	</div>
 
@@ -67,40 +49,17 @@
 		    <input id ="bookmarked_courses" name="bookmarked_courses" type="hidden"/>
 		  </div>
 		</form>
-		<script>
-			function submit_bookmark_form(){
-				$('#bookmarked_courses').val(localStorage.getItem("bookmark"));
-				$("#bookmarked_courses").submit();
-			}
-		</script>
-
-		
 		
 		<form accept-charset="UTF-8" action="/courses/taking" method="post">
 		  <div style="margin:0;padding:0">
 		    <input id ="taking_courses" name="taking_courses" type="hidden"/>
 		  </div>
 		</form>
-		<script>
-			function submit_taking_form(){
-				$('#taking_courses').val(localStorage.getItem("taking"));
-				$("#taking_courses").submit();
-			}
-		</script>
-
 		
-		
-
 		<form accept-charset="UTF-8" action="/courses/recent" method="post">
 		  <div style="margin:0;padding:0">
 		    <input id ="recent_courses" name="recent_courses" type="hidden"/>
 		  </div>
 		</form>
-		<script>
-			function submit_recent_form(){
-				$('#recent_courses').val(localStorage.getItem("recent"));
-				$("#recent_courses").submit();
-			}
-		</script>
 	</div>
 </div>
